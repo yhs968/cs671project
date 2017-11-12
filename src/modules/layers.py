@@ -1,6 +1,59 @@
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
+import torch.nn.functional as F
+
+class SentenceEncoder(nn.Module):
+    
+    def __init__(self, vocab_size, emb_size, n_kernels, kernel_sizes, pretrained = None, static = False):
+        '''
+        Args:
+            vocab_size (int): size of the vocabulary
+            emb_size (int): dimension of word embeddings
+            n_kernels (int): the number of filters
+            kernel_sizes (int): a list of sliding windows to be used
+            static (bool): whether you want the embeddings to be updated or not
+        '''
+        super().__init__()
+        in_channels = 1
+        self.vocab_size = vocab_size
+        self.n_kernels = n_kernels
+        self.kernel_sizes = kernel_sizes
+
+        self.emb = nn.Embedding(vocab_size, emb_size)
+        self.init_emb(pretrained)
+        if static:
+            self.emb.weight.requires_grad = False
+        self.convs = nn.ModuleList(
+            [nn.Conv2d(in_channels, n_kernels, (h, emb_size))
+             for h in kernel_sizes])
+        
+        if torch.cuda.is_available():
+            self.cuda()
+    
+    def init_emb(self, emb_pretrained):
+        if emb_pretrained == None:
+            return
+        else:
+            self.emb.weight = nn.Parameter(emb_pretrained.weight.data)
+
+    def forward(self, s):
+        '''
+        Args:
+            s (seq_len): a sentence of type torch.LongTensor.
+            Each entries represent a word index.
+        '''
+        # (batch_size = 1, in_channel, seq_len, emb_size)
+        s = self.emb(s).unsqueeze(1)
+        
+        feature_map = [F.relu(conv(s)).squeeze(3)
+                       for conv in self.convs]
+        feature_pooled = [F.max_pool1d(c, c.size(2)).squeeze(2)
+                          for c in feature_map]
+        feature_pooled = torch.cat(feature_pooled, 1)
+        
+        return feature_pooled
+
 
 class DocumentEncoder(nn.Module):
     
