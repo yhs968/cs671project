@@ -41,3 +41,61 @@ class DocumentDataset(Dataset):
     
     def __len__(self):
         return len(self.inputs)
+    
+class GreedyLabeler():
+    '''
+    Greedy Labeling using ROUGE F-scores
+    '''
+    
+    def __init__(self):
+        from rouge import Rouge
+        self.rouge = Rouge()
+        
+    def label(self, reference, corpus, l_type = '1', epsilon = 0.1):
+        '''
+        Args:
+            reference (str): reference summary
+            corpus (str): corpus to label
+            l_type (str)= label type. 1, 2, or L
+            epsilon (float): threshold value for stopping the greedy addition
+        '''
+        from nltk import sent_tokenize
+        
+        # Handle label Types
+        if type(l_type) == int:
+            l_type = str(l_type)
+        l_type = l_type.lower()
+        
+        # Initialize
+        ## current summary set
+        summary_set = []
+        ## candidate sentences
+        cand_s = sent_tokenize(corpus)
+        ## indices for candidate sentences
+        cand_i = set([i for i in range(len(cand_s))])
+        
+        label = [0 for i in range(len(cand_s))]
+        
+        max_improvement = 1
+        best_score = 0
+        
+        while len(cand_i) > 0:
+            new_summary = [' '.join(summary_set + [sent]) for sent in cand_s]
+            # ROUGE scores for each new summaries
+            score = [self.rouge.get_scores(reference, s, avg = True)['rouge-%s' % l_type]['f'] for s in new_summary]
+            # improvement in ROUGE scores by adding new summaries
+            ds = [s - best_score for s in score]
+            # best improvement
+            max_i, max_improvement = max([(i, d) for i, d in enumerate(ds) if i in cand_i],
+                                         key = lambda x:x[1])
+            # no more desired improvements
+            if max_improvement <= epsilon:
+                break
+            else:
+                label[max_i] = 1
+                summary_set.append(cand_s[max_i])
+                cand_i.remove(max_i)
+                best_score = max_improvement
+#                 print(cand_i)
+                
+        return label
