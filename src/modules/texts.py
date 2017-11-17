@@ -36,6 +36,27 @@ class Vocab:
         self.word2id = word2id
         self.V = len(id2word)
 
+    def sent2id(self, text, top_k = None, case_sensitive = False):
+        '''Tokenize a sentence into words
+
+        Args:
+            text: string.
+
+        Returns:
+            sent: List of words
+        '''
+        word2id = self.word2id
+        id2word = self.id2word
+        
+        if not case_sensitive:
+            text = text.lower()
+        
+        sent = wordpunct_tokenize(text)
+        sent = [word2id[word] if word in word2id else word2id['UNK'] for word in sent]
+        sent = [word2id['_BEGIN_']] + sent + [word2id['_END_']]
+
+        return sent
+    
     def sents2id(self, text, top_k = None, case_sensitive = False):
         '''Tokenizes a text into sentences, mapping the words to corresponding indices.
 
@@ -44,22 +65,9 @@ class Vocab:
 
         Returns:
             sents_list: List of sentences, where each sentences are the list of word indices.
-        '''
-        word2id = self.word2id
-        id2word = self.id2word
+        '''       
+        sents_list = [self.sent2id(sent, top_k, case_sensitive) for sent in sent_tokenize(text)]
         
-        if not case_sensitive:
-            text = text.lower()
-        
-        sents = sent_tokenize(text)
-
-        sents_list = []
-        for i in range(len(sents)):
-            sent = wordpunct_tokenize(sents[i])
-            sent = [word2id[word] if word in word2id else word2id['UNK'] for word in sent]
-            sent = [word2id['_BEGIN_']] + sent + [word2id['_END_']]
-            sents_list.append(sent)
-
         return sents_list
 
     def id2sents(self, sents):

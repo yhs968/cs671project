@@ -7,40 +7,78 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torch.autograd import Variable
+import re
+from modules.texts import Vocab
 
-class DocumentDataset(Dataset):
+class Doc(Dataset):
     '''
-    Documents dataset.
+    A document datatype
     '''
-    
-    def __init__(self, filename, vocab, case_sensitive = False):
+    def __init__(self, vocab, title, summary, content, labels):
         '''
         Args:
-            filename (string): full path of the document file
-            vocab (Vocab): Vocabulary class that contains the vocabulary for a corpus
-            emb (nn.Embedding): word embeddings corresponding to the words in words_dict
-            case_sensitive (bool): whether lower/uppercase letters differ
+            vocab (Vocab)
+            title (str), summary (str), content (str), labels (list of ints)
+            input_type (str): type of input key
         '''
-        
-        with open(filename) as f:
-            raw = f.read()
-        if not case_sensitive:
-            raw = raw.lower()
-        
         self.vocab = vocab
+        self.title = title
+        self.summary = summary
+        self.content = content
         # input sentences
-        self.inputs = vocab.sents2id(raw, case_sensitive)
-        np.random.seed(0)
-        self.targets = [np.random.randint(2) for sent in self.inputs]
+        self.inputs = vocab.sents2id(content)
+        self.targets = labels
+        assert len(self.inputs) == len(self.targets)
         
     def __getitem__(self, idx):
-        inputs = torch.LongTensor(self.inputs[idx]) 
-        targets = torch.LongTensor([self.targets[idx]])
+        input = torch.LongTensor(list(self.inputs[idx]))
+        target = torch.LongTensor([self.targets[idx]])
         
-        return inputs, targets
+        return input, target
     
     def __len__(self):
         return len(self.inputs)
+
+class DocumentsGroup(Dataset):
+    '''
+    Documents Group
+    '''
+    
+    def __init__(self, filename, vocab_size = None):
+        '''
+        Args:
+            filename (string): full path of the labeled documents pickle
+            vocab_size (int): the size of the vocabulary
+            case_sensitive (bool): whether lower/uppercase letters differ
+        '''
+        
+        import pickle
+        
+        self.filename = filename
+        self.vocab_size = vocab_size
+        
+        self.doc = []
+        with open(filename, 'rb') as f:
+            dat = pickle.load(f)
+        # Build corpus
+        corpus = []
+        for line in dat:
+            tokens = chain(*[wordpunct_tokenize(t) for t in line[:-1]])
+            corpus.extend(tokens)
+        corpus = ' '.join(corpus)
+        
+        # Build vocabulary
+        self.vocab = Vocab(corpus, top_k = vocab_size)
+        
+        for line in dat:
+            title, summary, content, labels = line
+            self.doc.append(Doc(self.vocab, title, summary, content, labels))
+        
+    def __getitem__(self, idx):
+        return self.doc[idx]
+    
+    def __len__(self):
+        return len(self.doc)
     
 class GreedyLabeler():
     '''
@@ -51,7 +89,7 @@ class GreedyLabeler():
         from rouge import Rouge
         self.rouge = Rouge()
         
-    def label(self, reference, corpus, l_type = '1', epsilon = 0.1):
+    def label(self, reference, corpus, l_type = '1', epsilon = 0.01):
         '''
         Args:
             reference (str): reference summary
@@ -99,3 +137,38 @@ class GreedyLabeler():
 #                 print(cand_i)
                 
         return label
+    
+class DocumentDataset(Dataset):
+    '''
+    @deprecated
+    Documents dataset.
+    '''
+    
+    def __init__(self, filename, vocab, case_sensitive = False):
+        '''
+        Args:
+            filename (string): full path of the document file
+            vocab (Vocab): Vocabulary class that contains the vocabulary for a corpus
+            emb (nn.Embedding): word embeddings corresponding to the words in words_dict
+            case_sensitive (bool): whether lower/uppercase letters differ
+        '''
+        
+        with open(filename) as f:
+            raw = f.read()
+        if not case_sensitive:
+            raw = raw.lower()
+        
+        self.vocab = vocab
+        # input sentences
+        self.inputs = vocab.sents2id(raw, case_sensitive)
+        np.random.seed(0)
+        self.targets = [np.random.randint(2) for sent in self.inputs]
+        
+    def __getitem__(self, idx):
+        inputs = torch.LongTensor(self.inputs[idx]) 
+        targets = torch.LongTensor([self.targets[idx]])
+        
+        return inputs, targets
+    
+    def __len__(self):
+        return len(self.inputs)
