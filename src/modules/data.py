@@ -14,30 +14,34 @@ class Doc(Dataset):
     '''
     A document datatype
     '''
-    def __init__(self, vocab, title, summary, content, labels):
+    def __init__(self, vocab, title, summary, content, ext_labels, doc_class = None):
         '''
         Args:
             vocab (Vocab)
-            title (str), summary (str), content (str), labels (list of ints)
+            title (str), summary (str), content (str), ext_labels (list of ints)
             input_type (str): type of input key
+            doc_class (int): type of the whole document
         '''
         self.vocab = vocab
         self.title = title
         self.summary = summary
         self.content = content
         # input sentences
-        self.inputs = vocab.sents2id(content)
-        self.targets = labels
-        assert len(self.inputs) == len(self.targets)
+        self.sents = vocab.sents2id(content)
+        # extraction labels
+        self.ext_labels = ext_labels
+        assert len(self.sents) == len(self.ext_labels)
+        # document class labels
+        self.doc_class = doc_class
         
     def __getitem__(self, idx):
-        input = torch.LongTensor(list(self.inputs[idx]))
-        target = torch.LongTensor([self.targets[idx]])
+        sent = torch.LongTensor(list(self.sents[idx]))
+        ext_label = torch.LongTensor([self.ext_labels[idx]])
         
-        return input, target
+        return sent, ext_label
     
     def __len__(self):
-        return len(self.inputs)
+        return len(self.sents)
 
 class DocumentsGroup(Dataset):
     '''
@@ -47,7 +51,7 @@ class DocumentsGroup(Dataset):
     def __init__(self, filename, vocab_size = None):
         '''
         Args:
-            filename (string): full path of the labeled documents pickle
+            filename (string): full path of the extractive labeled documents pickle
             vocab_size (int): the size of the vocabulary
             case_sensitive (bool): whether lower/uppercase letters differ
         '''
@@ -73,6 +77,17 @@ class DocumentsGroup(Dataset):
         for line in dat:
             title, summary, content, labels = line
             self.doc.append(Doc(self.vocab, title, summary, content, labels))
+            
+    def set_doc_classes(self, doc_classes):
+        '''
+        Used for document classification
+        
+        Args:
+            doc_classes (list of ints): 
+        '''
+        assert len(self.doc) == len(doc_classes)
+        for d, c in zip(self.doc, doc_classes):
+            d.doc_class = c
         
     def __getitem__(self, idx):
         return self.doc[idx]

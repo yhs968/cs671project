@@ -153,3 +153,32 @@ class ExtractorCell(nn.Module):
             p0 = p0.cuda()
         
         return p0
+    
+class DocumentClassifier(nn.Module):
+    
+    def __init__(self, sent_size, n_classes):
+        super().__init__()
+        self.sent_size = sent_size
+        self.n_classes = n_classes
+        self.linear = nn.Linear(sent_size, n_classes)
+        self.sigmoid = nn.Sigmoid()
+        
+        if torch.cuda.is_available():
+            self.cuda()
+    
+    def forward(self, p, s):
+        '''
+        Args:
+            p (seq_len, ): extraction probability
+            s (seq_len, sent_size): encoded sentences
+        
+        Returns:
+            q: (n_classes, 1): document classification probability
+        '''
+        s_avg = torch.sum(p.expand_as(s) * s, 0)
+        s_avg /= torch.sum(p)
+        
+        logit = self.linear(s_avg)
+        q = self.sigmoid(logit)
+        
+        return q
