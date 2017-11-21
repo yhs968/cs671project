@@ -43,9 +43,9 @@ class Doc(Dataset):
     def __len__(self):
         return len(self.sents)
 
-class DocumentsGroup(Dataset):
+class Documents(Dataset):
     '''
-    Documents Group
+    A Set of documents
     '''
     
     def __init__(self, filename, vocab_size = None):
