@@ -3,6 +3,7 @@ from os.path import join
 from collections import Counter
 from itertools import chain
 from nltk import sent_tokenize, wordpunct_tokenize
+from nltk.stem import WordNetLemmatizer
 import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -64,7 +65,7 @@ class Documents(Dataset):
     A Set of documents
     '''
     
-    def __init__(self, filename, vocab_size = None):
+    def __init__(self, filename, n_samples = None, vocab_size = None):
         '''
         Args:
             filename (string): full path of the extractive labeled documents pickle
@@ -80,17 +81,24 @@ class Documents(Dataset):
         self.doc = []
         with open(filename, 'rb') as f:
             dat = pickle.load(f)
+            
+        lem = WordNetLemmatizer()
         # Build corpus
         corpus = []
-        for line in dat:
+        for i, line in enumerate(dat):
+            if n_samples != None and i >= n_samples:
+                break
             tokens = chain(*[wordpunct_tokenize(t) for t in line[:-1]])
+            # tokens = [lem.lemmatize(t) for t in tokens]
             corpus.extend(tokens)
         corpus = ' '.join(corpus)
         
         # Build vocabulary
         self.vocab = Vocab(corpus, top_k = vocab_size)
         
-        for line in dat:
+        for i, line in enumerate(dat):
+            if n_samples != None and i >= n_samples:
+                break
             title, summary, content, labels = line
             self.doc.append(Doc(self.vocab, title, summary, content, labels))
             

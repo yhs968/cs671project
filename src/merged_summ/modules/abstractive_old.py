@@ -1,3 +1,6 @@
+'''
+Word-level abstractive summary
+'''
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
@@ -5,14 +8,14 @@ import torch.nn.functional as F
 import math
 
 class EncoderRNN(nn.Module):
-    def __init__(self, shared_emb, hidden_size, num_layers):
+    def __init__(self, vocab_size, emb_size, hidden_size, num_layers, shared_emb=None):
         super(EncoderRNN, self).__init__()
-        self.vocab_size = shared_emb.weight.size(0)
-        self.emb_size = shared_emb.weight.size(1)
+        self.vocab_size = vocab_size
+        self.emb_size = emb_size
         self.hidden_size = hidden_size
         self.num_layers = num_layers
         self.emb = self.init_emb(shared_emb)
-        self.gru = nn.GRU(self.emb_size, hidden_size, num_layers, bidirectional = True)
+        self.gru = nn.GRU(emb_size, hidden_size, num_layers, bidirectional = True)
         
         if torch.cuda.is_available():
             self.cuda()
@@ -97,17 +100,17 @@ class Attn(nn.Module):
         return energy
 
 class AttnDecoderRNN(nn.Module):
-    def __init__(self, shared_emb, hidden_size, num_layers):
+    def __init__(self, vocab_size, emb_size, hidden_size, num_layers, shared_emb=None):
         super().__init__()
-        self.vocab_size = shared_emb.weight.size(0)
-        self.emb_size = shared_emb.weight.size(1)
+        self.vocab_size = vocab_size
+        self.emb_size = emb_size
         self.hidden_size = hidden_size
         self.num_layers = num_layers
         
         self.emb = self.init_emb(shared_emb)
-        self.gru = nn.GRU(hidden_size+self.emb_size, hidden_size, num_layers)
+        self.gru = nn.GRU(hidden_size+emb_size, hidden_size, num_layers)
         self.attn = Attn(hidden_size)
-        self.out = nn.Linear(hidden_size, self.vocab_size)
+        self.out = nn.Linear(hidden_size, vocab_size)
         
         if torch.cuda.is_available():
             self.cuda()
@@ -145,7 +148,6 @@ class AttnDecoderRNN(nn.Module):
         
         # input for the gru
         gru_input = torch.cat((embedded, context), 2) # (S,B,d+H)
-#         print(gru_input.size())
         
         # decoder_output: (S,B,H)
         decoder_output, decoder_hidden = self.gru(gru_input, decoder_hidden)

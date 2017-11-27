@@ -12,15 +12,18 @@ class SentenceEncoder(nn.Module):
             emb_size (int): dimension of word embeddings
             n_kernels (int): the number of filters
             kernel_sizes (int): a list of sliding windows to be used
+            pretrained (nn.Embedding): a pretrained embedding, if it exists
             static (bool): whether you want the embeddings to be updated or not
         '''
         super().__init__()
         in_channels = 1
         self.vocab_size = vocab_size
+        self.emb_size = emb_size
         self.n_kernels = n_kernels
         self.kernel_sizes = kernel_sizes
+        self.sent_size = len(kernel_sizes) * n_kernels
 
-        self.emb = nn.Embedding(vocab_size, emb_size)
+        self.emb = self.init_emb(pretrained)
         self.init_emb(pretrained)
         if static:
             self.emb.weight.requires_grad = False
@@ -31,11 +34,19 @@ class SentenceEncoder(nn.Module):
         if torch.cuda.is_available():
             self.cuda()
     
-    def init_emb(self, emb_pretrained):
-        if emb_pretrained == None:
-            return
+    def init_emb(self, pretrained):
+        if pretrained != None:
+            return pretrained
         else:
-            self.emb.weight = nn.Parameter(emb_pretrained.weight.data)
+            return nn.Embedding(self.vocab_size, self.emb_size)
+        
+    def init_sent(self, batch_size):
+        s0 = Variable(torch.zeros(1, batch_size, self.sent_size))
+        
+        if torch.cuda.is_available():
+            s0 = s0.cuda()
+            
+        return s0
 
     def forward(self, s):
         '''
