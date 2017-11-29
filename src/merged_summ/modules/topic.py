@@ -4,7 +4,7 @@ from gensim import corpora
 import sys
 import csv
 from modules.data import Documents
-from stop_words import get_stop_words
+from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tokenize import RegexpTokenizer
@@ -15,13 +15,6 @@ import yaml
 from torch.utils.data import Dataset, DataLoader
 import os
 import pickle
-
-
-
-
-
-
-
 
 class Topics(Dataset):
 
@@ -51,7 +44,7 @@ class Topics(Dataset):
         documents = [docs.doc[idx].content for idx in range(len(docs.doc))]
 
         # Load stop words
-        stoplist = get_stop_words('en')
+        stoplist = stopwords.words('english')
         stoplist_additional = list('will also said'.split())
         stoplist = stoplist + stoplist_additional
 
