@@ -23,7 +23,7 @@ import pickle
 
 
 
-class topics(Dataset):
+class Topics(Dataset):
 
 
     def __init__(self, data_dir):
@@ -36,6 +36,7 @@ class topics(Dataset):
             loaded_file = pickle.load(f)
         self.num_topics = loaded_file["num_topics"]
         self.topics = loaded_file["topics"]
+        self.topics_top1 = loaded_file["topics_top1"]
 
     def run(self, num_topics=6):
         print("Running LDA")
@@ -114,12 +115,13 @@ class topics(Dataset):
         self.lda.print_topics(self.num_topics)
         self.topic_dict = {idx:topicstring for idx, topicstring in enumerate(str(input("Input topic names: ")).split())}
         self.topics = [[ [self.topic_dict[lda_topics[0]], float(int(lda_topics[1] * 10000))/10000] for lda_topics in self.lda[doc]] for doc in corpus]
+        self.topics_top1 = [doc_topics[np.argmax(np.asarray([a_topic[1] for a_topic in doc_topics]))][0] for doc_topics in self.topics]
 
 
 
         savename = os.path.join(self.data_dir, 'topics.pkl')
         with open(savename, 'bw') as f:
-            data_to_dump = {"num_topics":self.num_topics, "topics":self.topics}
+            data_to_dump = {"num_topics":self.num_topics, "topics":self.topics, "topics_top1":self.topics_top1}
             pickle.dump(data_to_dump,f)
 
 
