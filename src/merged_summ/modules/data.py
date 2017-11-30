@@ -53,6 +53,8 @@ class Doc(Dataset):
         self.words = list(chain(*vocab.sents2id(self.content)))
         # reference summaries
         self.summ = list(chain(*vocab.sents2id(self.summary)))
+        # headlines
+        self.head = list(chain(*vocab.sents2id(self.title)))
         self.mode = 'extract'
         
     def set_mode(self, mode):
@@ -67,13 +69,13 @@ class Doc(Dataset):
             return sent, ext_label
         
         elif self.mode == 'abstract':
-            return torch.LongTensor([self.summ[idx]])
+            return torch.LongTensor([self.head[idx]])
     
     def __len__(self):
         if self.mode == 'extract':
             return len(self.sents)
         elif self.mode == 'abstract':
-            return len(self.summ)
+            return len(self.head)
 
 class Documents(Dataset):
     '''
