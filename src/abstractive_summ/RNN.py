@@ -96,5 +96,6 @@ class AttnDecoderRNN(nn.Module):
 		concat_input = torch.cat((rnn_output, context), 1)
 		concat_output = F.tanh(self.concat(concat_input))
 		output = self.out(concat_output)
+		log_prob_output = F.log_softmax(output)
 
-		return output, hidden, attn_weights
+		return output, log_prob_output, hidden

@@ -7,6 +7,7 @@ import time
 import torch
 from torch.autograd import Variable
 
+import matplotlib.pyplot as plt
 
 PAD_token = 0 # padding
 SOS_token = 1 # start of sequence
@@ -18,7 +19,7 @@ class Lang:
 		self.name = name
 		self.word2index = {}
 		self.word2count = {}
-		self.index2word = {0: "PAD", 1: "SOS", 2: "EOS"}
+		self.index2word = {0: "<PAD>", 1: "<SOS>", 2: "<EOS>"}
 		self.n_words = 3  # Count default tokens
 
 	def index_words(self, sentence):
@@ -47,7 +48,7 @@ class Lang:
 		# Reinitialize dictionaries
 		self.word2index = {}
 		self.word2count = {}
-		self.index2word = {0: "PAD", 1: "SOS", 2: "EOS"}
+		self.index2word = {0: "<PAD>", 1: "<SOS>", 2: "<EOS>"}
 		self.n_words = 3 # Count default tokens
 
 		for word in keep_words:
@@ -211,35 +212,37 @@ def idxs_to_tensor(input_lang, output_lang, pairs) :
 	return input_var, input_lengths, target_var, target_lengths
 
 
-# get random batch from the whole pairs
-def random_batch(input_lang, output_lang, pairs, batch_size):
-	input_seqs = []
-	target_seqs = []
-
-	# Choose random pairs, check(should modify to no duplication)
-	for i in range(batch_size):
-		pair = random.choice(pairs)
-		input_seqs.append(indexes_from_sentence(input_lang, pair[0]))
-		target_seqs.append(indexes_from_sentence(output_lang, pair[1]))
-
-	# Zip into pairs, sort by length (descending), unzip
-	seq_pairs = sorted(zip(input_seqs, target_seqs), key=lambda p: len(p[0]), reverse=True)
-	input_seqs, target_seqs = zip(*seq_pairs)
-
-	# For input and target sequences, get array of lengths and pad with 0s to max length
-	input_lengths = [len(s) for s in input_seqs]
-	input_padded = [pad_seq(s, max(input_lengths)) for s in input_seqs]
-	target_lengths = [len(s) for s in target_seqs]
-	target_padded = [pad_seq(s, max(target_lengths)) for s in target_seqs]
-
-	# Turn padded arrays into (batch_size x max_len) tensors, transpose into (max_len x batch_size)
-	input_var = Variable(torch.LongTensor(input_padded)).transpose(0, 1).cuda()
-	target_var = Variable(torch.LongTensor(target_padded)).transpose(0, 1).cuda()
+# convert indexes to sentence
+def idxs_to_sentence(output_lang, idxs) : 
+	sentence = []
+	for idx in idxs : 
+		if idx == SOS_token or idx == EOS_token or idx == PAD_token : continue
+		else : sentence.append(output_lang.index2word[idx])
 	
-	return input_var, input_lengths, target_var, target_lengths
+	return ' '.join(word for word in sentence)
 
 
+# print in minutes, seconds form
 def as_minutes(s):
 	m = math.floor(s / 60)
 	s -= m * 60
-	return '%dm %ds' % (m, s)
+	return '%dm %.2fs' % (m, s)
+
+
+# plot every epochs
+def plot_epochs(train_losses, val_scores, test_scores, fig_name) : 
+	plt.figure()
+	min_train_loss = min(train_losses)
+	max_val_score = max(val_scores)
+	max_test_score = max(test_scores)
+	
+	n_epochs = len(train_losses)
+	plt.plot(range(n_epochs), train_losses, color = 'blue', lw = 1, label = 'Min train loss : %.4f' % min_train_loss)
+	plt.plot(range(n_epochs), val_scores, color = 'green', lw = 1, label = 'Max val score : %.4f' % max_val_score)
+	plt.plot(range(n_epochs), test_scores, color = 'red', lw = 1, label = 'Max test score : %.4f' % max_test_score)
+	
+	plt.xlim([0, n_epochs])
+	plt.ylim([0.0, 1.0])
+	plt.legend(loc="center right")
+	plt.savefig('figures/' + fig_name + '.png')
+	plt.close()
