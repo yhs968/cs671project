@@ -6,6 +6,10 @@ from itertools import chain
 import torch
 import numpy as np
 
+UNK_token = 0
+SOS_token = 1
+EOS_token = 2
+
 class Vocab:
     '''Abstract vocabulary class that has useful helper functions
     '''
@@ -29,7 +33,7 @@ class Vocab:
         
         word_counts = Counter(wordpunct_tokenize(corpus)).most_common(top_k)
 
-        id2word = sorted([word for word,count in word_counts]) + ['UNK','_BEGIN_','_END_']
+        id2word = ['UNK','_BEGIN_','_END_'] + sorted([word for word,count in word_counts])
         word2id = {word: i for i, word in enumerate(id2word)}
 
         self.id2word = id2word

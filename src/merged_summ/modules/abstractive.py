@@ -121,6 +121,7 @@ class AttnDecoderRNN(nn.Module):
             T: input_seq_len
             d: emb_size
             L: num_layers=1
+            V: vocabulary size
             
         Args:
             decoder_input (S,B): a word index for current time step
@@ -128,7 +129,7 @@ class AttnDecoderRNN(nn.Module):
             encoder_output (T,B,H)
         
         Returns:
-            decoder_output (S,B,H)
+            decoder_output (B,V)
             decoder_hidden (L,B,H)
         '''
         # Get the embedding of the current input word(not a sentence)
@@ -150,7 +151,7 @@ class AttnDecoderRNN(nn.Module):
         # decoder_output: (S,B,H)
         decoder_output, decoder_hidden = self.gru(gru_input, decoder_hidden)
         decoder_output = decoder_output.squeeze(0) # (B,H)
-        decoder_output = self.out(decoder_output) # (B,d)
+        decoder_output = self.out(decoder_output) # (B,V)
 
         return decoder_output, decoder_hidden, attn_weights
     
