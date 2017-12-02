@@ -11,7 +11,7 @@ class BeamTree :
         self.parent_node = parent_node
         # log probs from the root (all log_probs added)
         if parent_node is None : self.total_log_prob = 0
-        else: self.total_log_prob = parent_node.log_prob + log_prob
+        else : self.total_log_prob = parent_node.log_prob + log_prob
         # whether this node is EOS
         self.is_done = False
 
@@ -133,37 +133,40 @@ def generate_title(doc_sents, beam_size, max_kernel_size, models, max_target_len
     for i, (s, h) in enumerate(zip(sents_encoded, d_encoder_hiddens)):
         h_, c_, p = ext_extc(s, h, h_, c_, p)
         extract_probs[i] = p.squeeze(0)
-    ## Document Classifier
-    q = ext_d_classifier(extract_probs.view(-1,1), d_encoded.squeeze(1))
     
     # Abstractive Summarizer
     sents_ext = [sent for i,sent in enumerate(sents_raw)
                  if extract_probs[i].data[0] > 0.5]
+    
+#     print(sents_ext)
     ## skip if no sentences are selected as summaries
     if len(sents_ext) == 0:
         print("No sentences are selected")
         return
     words = torch.cat(sents_ext, dim=1).t()
+#     print(words)
     abs_enc_hidden = abs_enc.init_hidden(batch_size)
     abs_enc_output, abs_enc_hidden = abs_enc(words, abs_enc_hidden)
     ## Remove to too long documents to tackle memory overflow
     if len(abs_enc_output) > 6000:
         print('Out of memory')
         return
-    abs_dec_hidden = abs_dec.init_hidden(batch_size)
+    abs_dec_hidden = abs_enc_hidden.view(1,1,-1)
     abs_dec_input = Variable(torch.LongTensor([texts.SOS_token]).unsqueeze(1)).cuda()
     
     beam_batch = [[] for i in range(batch_size)]
     
     for t in range(max_target_length):
         if t == 0:
+#             print(abs_dec_input)
             abs_dec_output, abs_dec_hidden, _ = abs_dec(abs_dec_input, abs_dec_hidden, abs_enc_output)
             # (B = 1, V = vocab_size)
             abs_dec_prob = F.log_softmax(abs_dec_output)
             # print(abs_dec_prob.size())
             # Get top-k(beam size) values
             top_values, top_idxs = abs_dec_prob.data.topk(beam_size, dim = -1)
-            # print(top_values.size())
+#             print(top_values)
+            # print(top_idxs)
             for batch_idx in range(batch_size):
                 log_prob = 0 # p = 1
                 root = BeamTree(log_prob, texts.SOS_token)
@@ -171,6 +174,7 @@ def generate_title(doc_sents, beam_size, max_kernel_size, models, max_target_len
                     log_prob = top_values[batch_idx][beam_idx]
                     word_idx = top_idxs[batch_idx][beam_idx]
                     beam_batch[batch_idx].append(BeamTree(log_prob, word_idx, root))
+#             print(beam_batch)
         else:
             tmp_beam_batch = [[] for i in range(batch_size)]
             for beam_idx in range(beam_size): 
@@ -178,14 +182,20 @@ def generate_title(doc_sents, beam_size, max_kernel_size, models, max_target_len
                 for batch_idx in range(batch_size): 
                     # decoder inputs are words in current beam
                     abs_dec_input.append(beam_batch[batch_idx][beam_idx].word_idx)
+                
                 # Regard each beams as seperate batches
+                # (1, beam_size)
                 abs_dec_input = Variable(torch.LongTensor(abs_dec_input).view(1,-1)).cuda()
-                abs_dec_output, abs_dec_hidden, attn_weights = abs_dec(abs_dec_input, abs_dec_hidden, abs_enc_output)
+                abs_dec_output, abs_dec_hidden, _ = abs_dec(abs_dec_input, abs_dec_hidden, abs_enc_output)
+                # (B, V)
+                
+                abs_dec_prob = F.log_softmax(abs_dec_output)
 
                 # get top k(beam size) values
                 top_values, top_idxs = abs_dec_prob.data.topk(beam_size, dim = -1)
-                for batch_idx in range(batch_size) :
-                    for tmp_beam_idx in range(beam_size) : 
+#                 print(top_idxs)
+                for batch_idx in range(batch_size):
+                    for tmp_beam_idx in range(beam_size): 
                         # if current word is EOS, add it to tmp_beam_batch instead of its children
                         if beam_batch[batch_idx][beam_idx].word_idx == texts.EOS_token: 
                             tmp_beam_batch[batch_idx].append(beam_batch[batch_idx][beam_idx])
