@@ -1,2 +1,0 @@
-- [CNN and DailyMail news summary dataset](https://cs.nyu.edu/~kcho/DMQA/): articles / highlights.  Raw html version also available. *No HEADLINES*.
-- [News summary dataset for kaggle](https://www.kaggle.com/sunnysai12345/news-summary): articles / summaries / headlines
