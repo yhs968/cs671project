@@ -5,6 +5,7 @@ from collections import Counter
 from itertools import chain
 import torch
 import numpy as np
+import re
 
 UNK_token = 0
 SOS_token = 1
@@ -30,7 +31,7 @@ class Vocab:
             top_k -= 3
         if not case_sensitive:
             corpus = corpus.lower()
-        
+        corpus = re.sub('[^a-zA-Z0-9 \t\n\r\f\v]','', corpus)
         word_counts = Counter(wordpunct_tokenize(corpus)).most_common(top_k)
 
         id2word = ['UNK','_BEGIN_','_END_'] + sorted([word for word,count in word_counts])

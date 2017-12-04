@@ -1,0 +1,187 @@
+hidden_size: 400
+n_kernels:  50
+n_samples: 3000
+The pretrained vector file to use: /home/yhs/data/NLP/word_embeddings/GloVe/glove.6B.200d.txt
+The number of words in the pretrained vector: 400000
+The dimension of the pretrained vector: 200
+Initialized the word embeddings.
+Epoch: 0 / Loss:(1926.972/3861.486/250874.018) / Accuracy:(0.595/0.495) / TrainingTime:5.943(min)
+Epoch: 1 / Loss:(1872.323/2214.621/225882.791) / Accuracy:(0.613/0.719) / TrainingTime:5.812(min)
+Epoch: 2 / Loss:(1839.125/1770.205/209479.183) / Accuracy:(0.633/0.772) / TrainingTime:5.740(min)
+Epoch: 3 / Loss:(1814.788/1505.397/193851.030) / Accuracy:(0.647/0.801) / TrainingTime:5.629(min)
+Epoch: 4 / Loss:(1798.242/1286.225/178012.186) / Accuracy:(0.655/0.833) / TrainingTime:5.574(min)
+Epoch  5 finished.
+Sentence Extraction Accuracy: 0.653
+Document Classification Accuracy: 0.718
+Rouge Score: 0.282
+Epoch: 0 / Loss:(1784.664/1097.253/161521.762) / Accuracy:(0.661/0.862) / TrainingTime:5.526(min)
+Epoch: 1 / Loss:(1771.512/932.959/143958.875) / Accuracy:(0.666/0.890) / TrainingTime:5.506(min)
+Epoch: 2 / Loss:(1757.025/791.457/125068.765) / Accuracy:(0.671/0.915) / TrainingTime:5.481(min)
+Epoch: 3 / Loss:(1740.370/670.397/104960.464) / Accuracy:(0.678/0.931) / TrainingTime:5.452(min)
+Epoch: 4 / Loss:(1720.325/567.868/84505.616) / Accuracy:(0.683/0.947) / TrainingTime:5.430(min)
+Epoch 10 finished.
+Sentence Extraction Accuracy: 0.677
+Document Classification Accuracy: 0.739
+Rouge Score: 0.284
+Epoch: 0 / Loss:(1696.723/479.451/64898.468) / Accuracy:(0.693/0.961) / TrainingTime:5.428(min)
+Epoch: 1 / Loss:(1668.497/404.945/47580.284) / Accuracy:(0.702/0.970) / TrainingTime:5.419(min)
+Epoch: 2 / Loss:(1634.657/343.083/33956.055) / Accuracy:(0.712/0.977) / TrainingTime:5.394(min)
+Epoch: 3 / Loss:(1593.542/292.066/24478.235) / Accuracy:(0.722/0.982) / TrainingTime:5.378(min)
+Epoch: 4 / Loss:(1543.287/251.835/18347.734) / Accuracy:(0.737/0.988) / TrainingTime:5.365(min)
+Epoch 15 finished.
+Sentence Extraction Accuracy: 0.687
+Document Classification Accuracy: 0.760
+Rouge Score: 0.276
+Epoch: 0 / Loss:(1484.839/218.769/14331.856) / Accuracy:(0.752/0.992) / TrainingTime:5.353(min)
+Epoch: 1 / Loss:(1423.586/190.770/11690.815) / Accuracy:(0.769/0.998) / TrainingTime:5.324(min)
+Epoch: 2 / Loss:(1343.164/170.187/9789.443) / Accuracy:(0.794/1.006) / TrainingTime:5.300(min)
+Epoch: 3 / Loss:(1276.620/152.428/7842.235) / Accuracy:(0.814/1.018) / TrainingTime:5.281(min)
+Epoch: 4 / Loss:(1213.720/135.905/6899.055) / Accuracy:(0.835/1.028) / TrainingTime:5.262(min)
+Epoch 20 finished.
+Sentence Extraction Accuracy: 0.676
+Document Classification Accuracy: 0.750
+Rouge Score: 0.271
+Epoch: 0 / Loss:(1158.757/128.349/6038.002) / Accuracy:(0.847/1.031) / TrainingTime:5.253(min)
+Epoch: 1 / Loss:(1091.076/109.969/5015.135) / Accuracy:(0.875/1.048) / TrainingTime:5.212(min)
+Epoch: 2 / Loss:(1073.427/102.082/4979.583) / Accuracy:(0.876/1.043) / TrainingTime:5.228(min)
+Epoch: 3 / Loss:(980.710/89.164/4158.895) / Accuracy:(0.898/1.051) / TrainingTime:5.215(min)
+Epoch: 4 / Loss:(948.347/78.395/3677.777) / Accuracy:(0.903/1.050) / TrainingTime:5.219(min)
+Epoch 25 finished.
+Sentence Extraction Accuracy: 0.666
+Document Classification Accuracy: 0.758
+Rouge Score: 0.269
+Epoch: 0 / Loss:(923.555/86.247/3420.235) / Accuracy:(0.910/1.050) / TrainingTime:5.206(min)
+Epoch: 1 / Loss:(884.384/80.016/3182.463) / Accuracy:(0.915/1.053) / TrainingTime:5.207(min)
+Epoch: 2 / Loss:(833.666/70.090/2830.412) / Accuracy:(0.924/1.050) / TrainingTime:5.213(min)
+Epoch: 3 / Loss:(823.775/70.103/2997.232) / Accuracy:(0.920/1.042) / TrainingTime:5.225(min)
+Epoch: 4 / Loss:(789.201/62.854/2782.266) / Accuracy:(0.926/1.042) / TrainingTime:5.228(min)
+Epoch 30 finished.
+Sentence Extraction Accuracy: 0.674
+Document Classification Accuracy: 0.755
+Rouge Score: 0.267
+Epoch: 0 / Loss:(724.971/54.697/2492.449) / Accuracy:(0.940/1.047) / TrainingTime:5.209(min)
+Epoch: 1 / Loss:(710.294/57.374/2473.995) / Accuracy:(0.935/1.039) / TrainingTime:5.243(min)
+Epoch: 2 / Loss:(677.826/52.311/2438.343) / Accuracy:(0.943/1.041) / TrainingTime:5.244(min)
+Epoch: 3 / Loss:(652.424/49.488/2023.349) / Accuracy:(0.947/1.041) / TrainingTime:5.908(min)
+Epoch: 4 / Loss:(668.294/55.890/1840.452) / Accuracy:(0.937/1.031) / TrainingTime:6.219(min)
+Epoch 35 finished.
+Sentence Extraction Accuracy: 0.670
+Document Classification Accuracy: 0.760
+Rouge Score: 0.269
+Epoch: 0 / Loss:(641.685/49.443/1713.218) / Accuracy:(0.945/1.037) / TrainingTime:5.964(min)
+Epoch: 1 / Loss:(596.605/43.396/1601.821) / Accuracy:(0.955/1.038) / TrainingTime:5.248(min)
+Epoch: 2 / Loss:(573.320/43.486/1741.266) / Accuracy:(0.957/1.039) / TrainingTime:5.239(min)
+Epoch: 3 / Loss:(541.876/37.224/1429.440) / Accuracy:(0.957/1.035) / TrainingTime:5.253(min)
+Epoch: 4 / Loss:(537.600/42.478/1558.060) / Accuracy:(0.958/1.035) / TrainingTime:5.253(min)
+Epoch 40 finished.
+Sentence Extraction Accuracy: 0.642
+Document Classification Accuracy: 0.777
+Rouge Score: 0.266
+Epoch: 0 / Loss:(679.372/91.373/1501.773) / Accuracy:(0.938/1.024) / TrainingTime:6.707(min)
+Epoch: 1 / Loss:(526.759/36.846/1191.832) / Accuracy:(0.961/1.035) / TrainingTime:6.642(min)
+Epoch: 2 / Loss:(487.711/33.295/1335.516) / Accuracy:(0.965/1.034) / TrainingTime:5.254(min)
+Epoch: 3 / Loss:(488.840/31.576/1149.663) / Accuracy:(0.967/1.034) / TrainingTime:5.938(min)
+Epoch: 4 / Loss:(460.078/29.213/1226.508) / Accuracy:(0.970/1.033) / TrainingTime:6.490(min)
+Epoch 45 finished.
+Sentence Extraction Accuracy: 0.650
+Document Classification Accuracy: 0.770
+Rouge Score: 0.268
+Epoch: 0 / Loss:(740.783/60.700/1502.044) / Accuracy:(0.923/1.021) / TrainingTime:5.515(min)
+Epoch: 1 / Loss:(535.161/35.188/1268.452) / Accuracy:(0.954/1.028) / TrainingTime:5.277(min)
+Epoch: 2 / Loss:(456.786/30.119/1029.993) / Accuracy:(0.971/1.034) / TrainingTime:5.261(min)
+Epoch: 3 / Loss:(483.173/30.130/981.560) / Accuracy:(0.965/1.030) / TrainingTime:5.276(min)
+Epoch: 4 / Loss:(460.897/36.038/1348.290) / Accuracy:(0.969/1.030) / TrainingTime:5.262(min)
+Epoch 50 finished.
+Sentence Extraction Accuracy: 0.668
+Document Classification Accuracy: 0.755
+Rouge Score: 0.271
+Epoch: 0 / Loss:(407.810/25.286/1030.928) / Accuracy:(0.975/1.029) / TrainingTime:6.315(min)
+Epoch: 1 / Loss:(379.069/24.206/972.310) / Accuracy:(0.975/1.025) / TrainingTime:5.598(min)
+Epoch: 2 / Loss:(387.574/24.137/1015.505) / Accuracy:(0.977/1.027) / TrainingTime:7.052(min)
+Epoch: 3 / Loss:(370.616/23.010/877.710) / Accuracy:(0.979/1.026) / TrainingTime:7.024(min)
+Epoch: 4 / Loss:(348.820/21.088/851.544) / Accuracy:(0.976/1.021) / TrainingTime:7.077(min)
+Epoch 55 finished.
+Sentence Extraction Accuracy: 0.656
+Document Classification Accuracy: 0.768
+Rouge Score: 0.270
+Epoch: 0 / Loss:(338.124/23.765/742.037) / Accuracy:(0.981/1.023) / TrainingTime:6.478(min)
+Epoch: 1 / Loss:(332.691/20.848/694.887) / Accuracy:(0.982/1.023) / TrainingTime:7.087(min)
+Epoch: 2 / Loss:(310.979/21.146/744.940) / Accuracy:(0.981/1.019) / TrainingTime:5.645(min)
+Epoch: 3 / Loss:(332.469/22.118/790.804) / Accuracy:(0.979/1.019) / TrainingTime:6.865(min)
+Epoch: 4 / Loss:(302.680/19.231/740.800) / Accuracy:(0.983/1.019) / TrainingTime:6.754(min)
+Epoch 60 finished.
+Sentence Extraction Accuracy: 0.654
+Document Classification Accuracy: 0.769
+Rouge Score: 0.268
+Epoch: 0 / Loss:(414.685/26.300/862.075) / Accuracy:(0.971/1.018) / TrainingTime:6.573(min)
+Epoch: 1 / Loss:(408.810/29.612/786.200) / Accuracy:(0.976/1.022) / TrainingTime:5.283(min)
+Epoch: 2 / Loss:(472.373/40.625/1136.909) / Accuracy:(0.966/1.023) / TrainingTime:5.280(min)
+Epoch: 3 / Loss:(987.097/42.325/841.425) / Accuracy:(0.961/1.020) / TrainingTime:5.298(min)
+Epoch: 4 / Loss:(378.853/21.777/719.395) / Accuracy:(0.979/1.026) / TrainingTime:5.283(min)
+Epoch 65 finished.
+Sentence Extraction Accuracy: 0.668
+Document Classification Accuracy: 0.757
+Rouge Score: 0.269
+Epoch: 0 / Loss:(305.928/19.633/692.556) / Accuracy:(0.980/1.017) / TrainingTime:5.297(min)
+Epoch: 1 / Loss:(270.162/16.327/646.080) / Accuracy:(0.984/1.016) / TrainingTime:5.299(min)
+Epoch: 2 / Loss:(315.717/17.794/652.631) / Accuracy:(0.979/1.015) / TrainingTime:5.302(min)
+Epoch: 3 / Loss:(254.735/16.876/599.078) / Accuracy:(0.985/1.014) / TrainingTime:5.292(min)
+Epoch: 4 / Loss:(266.980/15.700/628.832) / Accuracy:(0.986/1.014) / TrainingTime:5.305(min)
+Epoch 70 finished.
+Sentence Extraction Accuracy: 0.669
+Document Classification Accuracy: 0.761
+Rouge Score: 0.269
+Epoch: 0 / Loss:(318.703/16.777/568.258) / Accuracy:(0.981/1.013) / TrainingTime:5.298(min)
+Epoch: 1 / Loss:(278.205/16.226/599.525) / Accuracy:(0.985/1.017) / TrainingTime:5.289(min)
+Epoch: 2 / Loss:(241.778/14.131/531.108) / Accuracy:(0.987/1.013) / TrainingTime:5.299(min)
+Epoch: 3 / Loss:(408.812/27.011/700.461) / Accuracy:(0.966/1.011) / TrainingTime:5.319(min)
+Epoch: 4 / Loss:(256.917/14.162/621.944) / Accuracy:(0.983/1.011) / TrainingTime:5.308(min)
+Epoch 75 finished.
+Sentence Extraction Accuracy: 0.649
+Document Classification Accuracy: 0.744
+Rouge Score: 0.266
+Epoch: 0 / Loss:(224.518/13.711/493.928) / Accuracy:(0.986/1.010) / TrainingTime:5.301(min)
+Epoch: 1 / Loss:(213.924/13.764/560.331) / Accuracy:(0.989/1.012) / TrainingTime:5.303(min)
+Epoch: 2 / Loss:(203.709/12.923/490.573) / Accuracy:(0.991/1.012) / TrainingTime:5.296(min)
+Epoch: 3 / Loss:(204.405/12.349/471.523) / Accuracy:(0.990/1.012) / TrainingTime:5.300(min)
+Epoch: 4 / Loss:(203.582/14.186/472.212) / Accuracy:(0.989/1.010) / TrainingTime:5.310(min)
+Epoch 80 finished.
+Sentence Extraction Accuracy: 0.658
+Document Classification Accuracy: 0.763
+Rouge Score: 0.266
+Epoch: 0 / Loss:(234.497/13.451/601.454) / Accuracy:(0.984/1.010) / TrainingTime:5.315(min)
+Epoch: 1 / Loss:(218.224/13.121/504.560) / Accuracy:(0.988/1.011) / TrainingTime:5.309(min)
+Epoch: 2 / Loss:(196.848/11.905/456.487) / Accuracy:(0.990/1.011) / TrainingTime:5.306(min)
+Epoch: 3 / Loss:(186.859/11.433/494.567) / Accuracy:(0.991/1.010) / TrainingTime:5.312(min)
+Epoch: 4 / Loss:(206.742/17.274/551.295) / Accuracy:(0.987/1.008) / TrainingTime:5.308(min)
+Epoch 85 finished.
+Sentence Extraction Accuracy: 0.664
+Document Classification Accuracy: 0.758
+Rouge Score: 0.272
+Epoch: 0 / Loss:(180.087/11.814/425.883) / Accuracy:(0.993/1.012) / TrainingTime:5.307(min)
+Epoch: 1 / Loss:(174.787/11.489/423.945) / Accuracy:(0.993/1.010) / TrainingTime:5.307(min)
+Epoch: 2 / Loss:(170.409/10.974/373.524) / Accuracy:(0.992/1.008) / TrainingTime:5.311(min)
+Epoch: 3 / Loss:(208.146/11.443/453.203) / Accuracy:(0.989/1.009) / TrainingTime:5.315(min)
+Epoch: 4 / Loss:(406.305/20.355/680.356) / Accuracy:(0.963/1.009) / TrainingTime:5.327(min)
+Epoch 90 finished.
+Sentence Extraction Accuracy: 0.664
+Document Classification Accuracy: 0.760
+Rouge Score: 0.268
+Epoch: 0 / Loss:(198.864/12.826/453.669) / Accuracy:(0.991/1.011) / TrainingTime:5.307(min)
+Epoch: 1 / Loss:(192.731/11.472/451.299) / Accuracy:(0.989/1.009) / TrainingTime:5.310(min)
+Epoch: 2 / Loss:(176.690/11.883/376.620) / Accuracy:(0.992/1.009) / TrainingTime:5.311(min)
+Epoch: 3 / Loss:(165.100/9.980/383.202) / Accuracy:(0.991/1.007) / TrainingTime:5.317(min)
+Epoch: 4 / Loss:(181.152/10.347/358.526) / Accuracy:(0.992/1.010) / TrainingTime:5.311(min)
+Epoch 95 finished.
+Sentence Extraction Accuracy: 0.653
+Document Classification Accuracy: 0.762
+Rouge Score: 0.270
+Epoch: 0 / Loss:(167.698/9.497/364.127) / Accuracy:(0.993/1.009) / TrainingTime:5.321(min)
+Epoch: 1 / Loss:(144.722/10.703/341.240) / Accuracy:(0.993/1.007) / TrainingTime:5.322(min)
+Epoch: 2 / Loss:(234.790/12.184/504.333) / Accuracy:(0.986/1.010) / TrainingTime:5.307(min)
+Epoch: 3 / Loss:(181.163/10.115/430.533) / Accuracy:(0.990/1.009) / TrainingTime:5.315(min)
+Epoch: 4 / Loss:(142.884/9.434/377.631) / Accuracy:(0.993/1.007) / TrainingTime:5.315(min)
+Epoch 100 finished.
+Sentence Extraction Accuracy: 0.658
+Document Classification Accuracy: 0.755
+Rouge Score: 0.266
