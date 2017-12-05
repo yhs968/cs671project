@@ -1,0 +1,862 @@
+CUDA_VISIBLE_DEVICES=1 python run.py --h=400 --k=100
+hidden_size: 400
+n_kernels: 100
+The pretrained vector file to use: /home/dmlab/yhsdm/data/NLP/word_embeddings/GloVe/glove.6B.200d.txt
+The number of words in the pretrained vector: 400000
+The dimension of the pretrained vector: 200
+Initialized the word embeddings.
+Epoch: 0 / Loss:(1912.590/3774.999/247764.520) / Accuracy:(0.593/0.508) / TrainingTime:6.722(min)
+Epoch: 1 / Loss:(1861.957/2152.453/223113.346) / Accuracy:(0.617/0.729) / TrainingTime:6.627(min)
+Epoch: 2 / Loss:(1833.200/1750.354/208882.186) / Accuracy:(0.636/0.777) / TrainingTime:6.593(min)
+Epoch: 3 / Loss:(1812.358/1491.766/194514.189) / Accuracy:(0.651/0.808) / TrainingTime:6.581(min)
+Epoch: 4 / Loss:(1793.988/1274.091/179690.817) / Accuracy:(0.661/0.839) / TrainingTime:6.571(min)
+Epoch  5 finished.
+/home/dmlab/yhsdm/cs671project/src/modules/beam_search.py:164: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  abs_dec_prob = F.log_softmax(abs_dec_output)
+/home/dmlab/yhsdm/cs671project/src/modules/beam_search.py:192: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  abs_dec_prob = F.log_softmax(abs_dec_output)
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.653
+Document Classification Accuracy: 0.727
+Rouge Score: 0.331
+Epoch: 0 / Loss:(1775.290/1087.830/164243.655) / Accuracy:(0.670/0.868) / TrainingTime:6.591(min)
+Epoch: 1 / Loss:(1754.330/928.682/147750.875) / Accuracy:(0.676/0.894) / TrainingTime:6.605(min)
+Epoch: 2 / Loss:(1730.025/791.423/129923.333) / Accuracy:(0.684/0.914) / TrainingTime:6.505(min)
+Epoch: 3 / Loss:(1700.890/671.561/110691.510) / Accuracy:(0.691/0.933) / TrainingTime:6.472(min)
+Epoch: 4 / Loss:(1665.489/569.519/90895.437) / Accuracy:(0.700/0.948) / TrainingTime:6.443(min)
+Epoch 10 finished.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.687
+Document Classification Accuracy: 0.744
+Rouge Score: 0.321
+Epoch: 0 / Loss:(1622.012/483.217/71703.351) / Accuracy:(0.712/0.960) / TrainingTime:6.467(min)
+Epoch: 1 / Loss:(1568.255/411.501/53607.405) / Accuracy:(0.726/0.969) / TrainingTime:6.582(min)
+Epoch: 2 / Loss:(1503.785/353.240/39102.193) / Accuracy:(0.741/0.976) / TrainingTime:6.619(min)
+Epoch: 3 / Loss:(1454.387/305.385/28552.415) / Accuracy:(0.755/0.981) / TrainingTime:6.445(min)
+Epoch: 4 / Loss:(1384.275/264.585/21577.291) / Accuracy:(0.772/0.984) / TrainingTime:6.428(min)
+Epoch 15 finished.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.694
+Document Classification Accuracy: 0.744
+Rouge Score: 0.322
+Epoch: 0 / Loss:(1291.677/228.790/16202.347) / Accuracy:(0.790/0.989) / TrainingTime:6.401(min)
+Epoch: 1 / Loss:(1234.219/203.595/13168.011) / Accuracy:(0.802/0.992) / TrainingTime:6.301(min)
+Epoch: 2 / Loss:(1188.532/185.194/10577.024) / Accuracy:(0.815/0.993) / TrainingTime:6.828(min)
+Epoch: 3 / Loss:(1117.077/162.538/8770.571) / Accuracy:(0.827/0.996) / TrainingTime:6.255(min)
+Epoch: 4 / Loss:(1129.822/156.665/7501.170) / Accuracy:(0.827/0.996) / TrainingTime:6.093(min)
+Epoch 20 finished.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+No sentences are selected
+No sentences are selected
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.666
+Document Classification Accuracy: 0.752
+Rouge Score: 0.311
+Epoch: 0 / Loss:(1020.610/128.552/6013.792) / Accuracy:(0.847/0.997) / TrainingTime:6.100(min)
+Epoch: 1 / Loss:(991.928/118.646/5249.135) / Accuracy:(0.852/0.998) / TrainingTime:6.484(min)
+Epoch: 2 / Loss:(1140.143/126.880/5532.491) / Accuracy:(0.834/0.996) / TrainingTime:6.638(min)
+Epoch: 3 / Loss:(937.338/97.022/4489.426) / Accuracy:(0.863/0.999) / TrainingTime:6.823(min)
+Epoch: 4 / Loss:(868.585/83.621/4053.054) / Accuracy:(0.875/0.999) / TrainingTime:6.841(min)
+Epoch 25 finished.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.678
+Document Classification Accuracy: 0.755
+Rouge Score: 0.319
+Epoch: 0 / Loss:(825.594/75.059/3736.682) / Accuracy:(0.881/1.000) / TrainingTime:6.653(min)
+Epoch: 1 / Loss:(799.875/74.515/3578.228) / Accuracy:(0.886/0.999) / TrainingTime:6.642(min)
+Epoch: 2 / Loss:(788.883/71.093/3330.507) / Accuracy:(0.888/0.999) / TrainingTime:6.630(min)
+Epoch: 3 / Loss:(710.173/61.258/3144.088) / Accuracy:(0.901/1.000) / TrainingTime:6.642(min)
+Epoch: 4 / Loss:(678.567/58.840/2825.654) / Accuracy:(0.906/0.999) / TrainingTime:7.034(min)
+Epoch 30 finished.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.685
+Document Classification Accuracy: 0.758
+Rouge Score: 0.306
+Epoch: 0 / Loss:(659.005/56.886/2570.867) / Accuracy:(0.909/1.000) / TrainingTime:6.676(min)
+Epoch: 1 / Loss:(627.173/55.797/2488.135) / Accuracy:(0.915/0.999) / TrainingTime:6.704(min)
+Epoch: 2 / Loss:(607.698/51.484/2356.847) / Accuracy:(0.918/1.000) / TrainingTime:6.759(min)
+Epoch: 3 / Loss:(572.105/57.900/2075.271) / Accuracy:(0.922/0.999) / TrainingTime:6.735(min)
+Epoch: 4 / Loss:(556.561/47.839/1937.470) / Accuracy:(0.926/1.000) / TrainingTime:6.741(min)
+Epoch 35 finished.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.680
+Document Classification Accuracy: 0.755
+Rouge Score: 0.304
+Epoch: 0 / Loss:(552.099/50.413/1997.172) / Accuracy:(0.928/0.999) / TrainingTime:6.916(min)
+Epoch: 1 / Loss:(541.995/46.364/1806.060) / Accuracy:(0.931/0.999) / TrainingTime:6.730(min)
+Epoch: 2 / Loss:(483.051/40.417/1538.615) / Accuracy:(0.938/1.000) / TrainingTime:6.728(min)
+Epoch: 3 / Loss:(442.993/37.393/1476.142) / Accuracy:(0.945/1.000) / TrainingTime:6.765(min)
+Epoch: 4 / Loss:(424.775/33.953/1341.824) / Accuracy:(0.948/1.000) / TrainingTime:6.801(min)
+Epoch 40 finished.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.680
+Document Classification Accuracy: 0.749
+Rouge Score: 0.301
+Epoch: 0 / Loss:(482.611/48.420/1367.705) / Accuracy:(0.942/0.999) / TrainingTime:7.187(min)
+Epoch: 1 / Loss:(859.946/93.262/2424.516) / Accuracy:(0.881/0.993) / TrainingTime:6.837(min)
+Epoch: 2 / Loss:(528.922/37.054/1547.670) / Accuracy:(0.932/1.000) / TrainingTime:6.736(min)
+Epoch: 3 / Loss:(409.214/30.844/1277.814) / Accuracy:(0.952/1.000) / TrainingTime:6.748(min)
+Epoch: 4 / Loss:(365.137/29.502/1203.137) / Accuracy:(0.958/1.000) / TrainingTime:6.755(min)
+Epoch 45 finished.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.680
+Document Classification Accuracy: 0.761
+Rouge Score: 0.305
+Epoch: 0 / Loss:(358.805/29.709/1028.127) / Accuracy:(0.957/1.000) / TrainingTime:6.923(min)
+Epoch: 1 / Loss:(547.128/45.708/1582.966) / Accuracy:(0.936/0.998) / TrainingTime:7.040(min)
+Epoch: 2 / Loss:(596.585/39.909/1438.525) / Accuracy:(0.922/0.999) / TrainingTime:6.264(min)
+Epoch: 3 / Loss:(517.906/37.068/1229.176) / Accuracy:(0.945/0.999) / TrainingTime:6.230(min)
+Epoch: 4 / Loss:(398.628/37.074/1086.587) / Accuracy:(0.952/0.999) / TrainingTime:6.231(min)
+Epoch 50 finished.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.655
+Document Classification Accuracy: 0.753
+Rouge Score: 0.301
+Epoch: 0 / Loss:(322.154/26.522/1008.300) / Accuracy:(0.963/1.000) / TrainingTime:6.181(min)
+Epoch: 1 / Loss:(349.525/30.426/951.784) / Accuracy:(0.959/0.999) / TrainingTime:6.345(min)
+Epoch: 2 / Loss:(476.186/28.619/897.555) / Accuracy:(0.958/1.000) / TrainingTime:6.182(min)
+Epoch: 3 / Loss:(354.519/24.352/941.271) / Accuracy:(0.960/1.000) / TrainingTime:6.168(min)
+Epoch: 4 / Loss:(519.834/69.775/1247.095) / Accuracy:(0.941/0.995) / TrainingTime:6.204(min)
+Epoch 55 finished.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.674
+Document Classification Accuracy: 0.758
+Rouge Score: 0.302
+Epoch: 0 / Loss:(294.978/23.942/796.797) / Accuracy:(0.970/1.000) / TrainingTime:6.232(min)
+Epoch: 1 / Loss:(257.038/23.675/804.761) / Accuracy:(0.975/1.000) / TrainingTime:6.232(min)
+Epoch: 2 / Loss:(222.098/21.876/691.293) / Accuracy:(0.978/1.000) / TrainingTime:6.407(min)
+Epoch: 3 / Loss:(204.270/20.103/618.162) / Accuracy:(0.980/1.000) / TrainingTime:6.212(min)
+Epoch: 4 / Loss:(207.975/24.793/785.314) / Accuracy:(0.979/0.999) / TrainingTime:6.222(min)
+Epoch 60 finished.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.667
+Document Classification Accuracy: 0.760
+Rouge Score: 0.304
+Epoch: 0 / Loss:(265.959/29.653/863.116) / Accuracy:(0.972/0.999) / TrainingTime:6.190(min)
+Epoch: 1 / Loss:(379.737/61.073/850.393) / Accuracy:(0.959/0.996) / TrainingTime:6.212(min)
+Epoch: 2 / Loss:(265.240/23.377/903.783) / Accuracy:(0.971/1.000) / TrainingTime:6.339(min)
+Epoch: 3 / Loss:(204.621/20.742/699.106) / Accuracy:(0.979/1.000) / TrainingTime:6.220(min)
+Epoch: 4 / Loss:(189.141/20.390/635.134) / Accuracy:(0.980/1.000) / TrainingTime:6.226(min)
+Epoch 65 finished.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.665
+Document Classification Accuracy: 0.757
+Rouge Score: 0.300
+Epoch: 0 / Loss:(159.664/17.680/620.984) / Accuracy:(0.984/1.000) / TrainingTime:6.241(min)
+Epoch: 1 / Loss:(171.138/25.214/570.626) / Accuracy:(0.984/1.000) / TrainingTime:6.277(min)
+Epoch: 2 / Loss:(163.902/17.967/575.774) / Accuracy:(0.985/1.000) / TrainingTime:6.238(min)
+Epoch: 3 / Loss:(150.225/17.206/541.633) / Accuracy:(0.986/1.000) / TrainingTime:6.378(min)
+Epoch: 4 / Loss:(140.687/16.532/510.297) / Accuracy:(0.987/1.000) / TrainingTime:6.218(min)
+Epoch 70 finished.
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.666
+Document Classification Accuracy: 0.751
+Rouge Score: 0.301
+Epoch: 0 / Loss:(121.459/15.551/507.938) / Accuracy:(0.989/1.000) / TrainingTime:6.245(min)
+Epoch: 1 / Loss:(112.934/14.757/520.470) / Accuracy:(0.990/1.000) / TrainingTime:6.259(min)
+Epoch: 2 / Loss:(111.719/16.824/498.174) / Accuracy:(0.990/1.000) / TrainingTime:6.260(min)
+Epoch: 3 / Loss:(244.489/17.777/503.475) / Accuracy:(0.982/1.000) / TrainingTime:6.273(min)
+Epoch: 4 / Loss:(164.591/14.489/525.553) / Accuracy:(0.984/1.000) / TrainingTime:6.328(min)
+Epoch 75 finished.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.666
+Document Classification Accuracy: 0.755
+Rouge Score: 0.301
+Epoch: 0 / Loss:(116.939/13.954/480.541) / Accuracy:(0.990/1.000) / TrainingTime:6.283(min)
+Epoch: 1 / Loss:(111.864/14.941/504.978) / Accuracy:(0.990/1.000) / TrainingTime:6.262(min)
+Epoch: 2 / Loss:(112.961/14.244/497.180) / Accuracy:(0.990/1.000) / TrainingTime:6.265(min)
+Epoch: 3 / Loss:(106.950/13.777/413.968) / Accuracy:(0.991/1.000) / TrainingTime:6.297(min)
+Epoch: 4 / Loss:(116.437/13.227/426.425) / Accuracy:(0.989/1.000) / TrainingTime:6.267(min)
+Epoch 80 finished.
+Error: The length of the document is 1.
+No sentences are selected
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+No sentences are selected
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Error: The length of the document is 1.
+Sentence Extraction Accuracy: 0.664
+Document Classification Accuracy: 0.752
+Rouge Score: 0.301
+
