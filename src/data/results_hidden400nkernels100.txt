@@ -1,0 +1,3 @@
+Sentence Extraction Accuracy: 0.664
+Document Classification Accuracy: 0.752
+Rouge Score: 0.301
