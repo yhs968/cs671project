@@ -1,862 +1,337 @@
-CUDA_VISIBLE_DEVICES=1 python run.py --h=400 --k=100
-hidden_size: 400
-n_kernels: 100
-The pretrained vector file to use: /home/dmlab/yhsdm/data/NLP/word_embeddings/GloVe/glove.6B.200d.txt
-The number of words in the pretrained vector: 400000
-The dimension of the pretrained vector: 200
 Initialized the word embeddings.
-Epoch: 0 / Loss:(1912.590/3774.999/247764.520) / Accuracy:(0.593/0.508) / TrainingTime:6.722(min)
-Epoch: 1 / Loss:(1861.957/2152.453/223113.346) / Accuracy:(0.617/0.729) / TrainingTime:6.627(min)
-Epoch: 2 / Loss:(1833.200/1750.354/208882.186) / Accuracy:(0.636/0.777) / TrainingTime:6.593(min)
-Epoch: 3 / Loss:(1812.358/1491.766/194514.189) / Accuracy:(0.651/0.808) / TrainingTime:6.581(min)
-Epoch: 4 / Loss:(1793.988/1274.091/179690.817) / Accuracy:(0.661/0.839) / TrainingTime:6.571(min)
-Epoch  5 finished.
-/home/dmlab/yhsdm/cs671project/src/modules/beam_search.py:164: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
-  abs_dec_prob = F.log_softmax(abs_dec_output)
-/home/dmlab/yhsdm/cs671project/src/modules/beam_search.py:192: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
-  abs_dec_prob = F.log_softmax(abs_dec_output)
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.653
-Document Classification Accuracy: 0.727
-Rouge Score: 0.331
-Epoch: 0 / Loss:(1775.290/1087.830/164243.655) / Accuracy:(0.670/0.868) / TrainingTime:6.591(min)
-Epoch: 1 / Loss:(1754.330/928.682/147750.875) / Accuracy:(0.676/0.894) / TrainingTime:6.605(min)
-Epoch: 2 / Loss:(1730.025/791.423/129923.333) / Accuracy:(0.684/0.914) / TrainingTime:6.505(min)
-Epoch: 3 / Loss:(1700.890/671.561/110691.510) / Accuracy:(0.691/0.933) / TrainingTime:6.472(min)
-Epoch: 4 / Loss:(1665.489/569.519/90895.437) / Accuracy:(0.700/0.948) / TrainingTime:6.443(min)
+Epoch: 0 / Loss:(1914.791/3766.672/248081.631) / Accuracy:(0.590/0.509) / TrainingTime:5.984(min)
+Epoch: 1 / Loss:(1867.594/2144.001/223075.207) / Accuracy:(0.615/0.735) / TrainingTime:5.873(min)
+Epoch: 2 / Loss:(1839.208/1756.058/208777.747) / Accuracy:(0.633/0.776) / TrainingTime:5.806(min)
+Epoch: 3 / Loss:(1818.921/1504.198/194437.059) / Accuracy:(0.647/0.803) / TrainingTime:5.701(min)
+Epoch: 4 / Loss:(1802.556/1292.144/179715.961) / Accuracy:(0.658/0.834) / TrainingTime:5.643(min)
+Epoch: 5 / Loss:(1787.533/1107.543/164328.877) / Accuracy:(0.664/0.863) / TrainingTime:5.606(min)
+Epoch: 6 / Loss:(1771.910/948.341/147860.583) / Accuracy:(0.668/0.889) / TrainingTime:5.587(min)
+Epoch: 7 / Loss:(1754.710/811.127/130009.830) / Accuracy:(0.676/0.910) / TrainingTime:5.562(min)
+Epoch: 8 / Loss:(1734.648/690.990/110862.562) / Accuracy:(0.683/0.929) / TrainingTime:5.533(min)
+Epoch: 9 / Loss:(1710.766/586.028/91236.157) / Accuracy:(0.689/0.946) / TrainingTime:5.514(min)
 Epoch 10 finished.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.687
-Document Classification Accuracy: 0.744
-Rouge Score: 0.321
-Epoch: 0 / Loss:(1622.012/483.217/71703.351) / Accuracy:(0.712/0.960) / TrainingTime:6.467(min)
-Epoch: 1 / Loss:(1568.255/411.501/53607.405) / Accuracy:(0.726/0.969) / TrainingTime:6.582(min)
-Epoch: 2 / Loss:(1503.785/353.240/39102.193) / Accuracy:(0.741/0.976) / TrainingTime:6.619(min)
-Epoch: 3 / Loss:(1454.387/305.385/28552.415) / Accuracy:(0.755/0.981) / TrainingTime:6.445(min)
-Epoch: 4 / Loss:(1384.275/264.585/21577.291) / Accuracy:(0.772/0.984) / TrainingTime:6.428(min)
-Epoch 15 finished.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.694
-Document Classification Accuracy: 0.744
-Rouge Score: 0.322
-Epoch: 0 / Loss:(1291.677/228.790/16202.347) / Accuracy:(0.790/0.989) / TrainingTime:6.401(min)
-Epoch: 1 / Loss:(1234.219/203.595/13168.011) / Accuracy:(0.802/0.992) / TrainingTime:6.301(min)
-Epoch: 2 / Loss:(1188.532/185.194/10577.024) / Accuracy:(0.815/0.993) / TrainingTime:6.828(min)
-Epoch: 3 / Loss:(1117.077/162.538/8770.571) / Accuracy:(0.827/0.996) / TrainingTime:6.255(min)
-Epoch: 4 / Loss:(1129.822/156.665/7501.170) / Accuracy:(0.827/0.996) / TrainingTime:6.093(min)
+Sentence Extraction Accuracy: 0.680
+Document Classification Accuracy: 0.735
+Rouge Score: 0.131
+Epoch: 0 / Loss:(1682.313/495.615/71424.407) / Accuracy:(0.698/0.959) / TrainingTime:5.497(min)
+Epoch: 1 / Loss:(1649.335/420.135/54341.747) / Accuracy:(0.705/0.968) / TrainingTime:5.483(min)
+Epoch: 2 / Loss:(1608.306/357.262/39643.247) / Accuracy:(0.716/0.975) / TrainingTime:5.455(min)
+Epoch: 3 / Loss:(1558.572/305.097/28414.854) / Accuracy:(0.727/0.980) / TrainingTime:5.439(min)
+Epoch: 4 / Loss:(1496.911/261.705/20932.248) / Accuracy:(0.742/0.984) / TrainingTime:5.422(min)
+Epoch: 5 / Loss:(1423.050/226.548/15866.249) / Accuracy:(0.760/0.989) / TrainingTime:5.405(min)
+Epoch: 6 / Loss:(1333.254/197.937/12676.216) / Accuracy:(0.782/0.991) / TrainingTime:5.379(min)
+Epoch: 7 / Loss:(1246.912/174.949/10969.881) / Accuracy:(0.801/0.994) / TrainingTime:5.356(min)
+Epoch: 8 / Loss:(1183.498/154.289/9150.570) / Accuracy:(0.816/0.995) / TrainingTime:5.343(min)
+Epoch: 9 / Loss:(1103.883/142.062/7705.245) / Accuracy:(0.831/0.996) / TrainingTime:5.326(min)
 Epoch 20 finished.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-No sentences are selected
-No sentences are selected
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.666
-Document Classification Accuracy: 0.752
-Rouge Score: 0.311
-Epoch: 0 / Loss:(1020.610/128.552/6013.792) / Accuracy:(0.847/0.997) / TrainingTime:6.100(min)
-Epoch: 1 / Loss:(991.928/118.646/5249.135) / Accuracy:(0.852/0.998) / TrainingTime:6.484(min)
-Epoch: 2 / Loss:(1140.143/126.880/5532.491) / Accuracy:(0.834/0.996) / TrainingTime:6.638(min)
-Epoch: 3 / Loss:(937.338/97.022/4489.426) / Accuracy:(0.863/0.999) / TrainingTime:6.823(min)
-Epoch: 4 / Loss:(868.585/83.621/4053.054) / Accuracy:(0.875/0.999) / TrainingTime:6.841(min)
-Epoch 25 finished.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.678
-Document Classification Accuracy: 0.755
-Rouge Score: 0.319
-Epoch: 0 / Loss:(825.594/75.059/3736.682) / Accuracy:(0.881/1.000) / TrainingTime:6.653(min)
-Epoch: 1 / Loss:(799.875/74.515/3578.228) / Accuracy:(0.886/0.999) / TrainingTime:6.642(min)
-Epoch: 2 / Loss:(788.883/71.093/3330.507) / Accuracy:(0.888/0.999) / TrainingTime:6.630(min)
-Epoch: 3 / Loss:(710.173/61.258/3144.088) / Accuracy:(0.901/1.000) / TrainingTime:6.642(min)
-Epoch: 4 / Loss:(678.567/58.840/2825.654) / Accuracy:(0.906/0.999) / TrainingTime:7.034(min)
-Epoch 30 finished.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.685
-Document Classification Accuracy: 0.758
-Rouge Score: 0.306
-Epoch: 0 / Loss:(659.005/56.886/2570.867) / Accuracy:(0.909/1.000) / TrainingTime:6.676(min)
-Epoch: 1 / Loss:(627.173/55.797/2488.135) / Accuracy:(0.915/0.999) / TrainingTime:6.704(min)
-Epoch: 2 / Loss:(607.698/51.484/2356.847) / Accuracy:(0.918/1.000) / TrainingTime:6.759(min)
-Epoch: 3 / Loss:(572.105/57.900/2075.271) / Accuracy:(0.922/0.999) / TrainingTime:6.735(min)
-Epoch: 4 / Loss:(556.561/47.839/1937.470) / Accuracy:(0.926/1.000) / TrainingTime:6.741(min)
-Epoch 35 finished.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.680
-Document Classification Accuracy: 0.755
-Rouge Score: 0.304
-Epoch: 0 / Loss:(552.099/50.413/1997.172) / Accuracy:(0.928/0.999) / TrainingTime:6.916(min)
-Epoch: 1 / Loss:(541.995/46.364/1806.060) / Accuracy:(0.931/0.999) / TrainingTime:6.730(min)
-Epoch: 2 / Loss:(483.051/40.417/1538.615) / Accuracy:(0.938/1.000) / TrainingTime:6.728(min)
-Epoch: 3 / Loss:(442.993/37.393/1476.142) / Accuracy:(0.945/1.000) / TrainingTime:6.765(min)
-Epoch: 4 / Loss:(424.775/33.953/1341.824) / Accuracy:(0.948/1.000) / TrainingTime:6.801(min)
-Epoch 40 finished.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.680
-Document Classification Accuracy: 0.749
-Rouge Score: 0.301
-Epoch: 0 / Loss:(482.611/48.420/1367.705) / Accuracy:(0.942/0.999) / TrainingTime:7.187(min)
-Epoch: 1 / Loss:(859.946/93.262/2424.516) / Accuracy:(0.881/0.993) / TrainingTime:6.837(min)
-Epoch: 2 / Loss:(528.922/37.054/1547.670) / Accuracy:(0.932/1.000) / TrainingTime:6.736(min)
-Epoch: 3 / Loss:(409.214/30.844/1277.814) / Accuracy:(0.952/1.000) / TrainingTime:6.748(min)
-Epoch: 4 / Loss:(365.137/29.502/1203.137) / Accuracy:(0.958/1.000) / TrainingTime:6.755(min)
-Epoch 45 finished.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.680
-Document Classification Accuracy: 0.761
-Rouge Score: 0.305
-Epoch: 0 / Loss:(358.805/29.709/1028.127) / Accuracy:(0.957/1.000) / TrainingTime:6.923(min)
-Epoch: 1 / Loss:(547.128/45.708/1582.966) / Accuracy:(0.936/0.998) / TrainingTime:7.040(min)
-Epoch: 2 / Loss:(596.585/39.909/1438.525) / Accuracy:(0.922/0.999) / TrainingTime:6.264(min)
-Epoch: 3 / Loss:(517.906/37.068/1229.176) / Accuracy:(0.945/0.999) / TrainingTime:6.230(min)
-Epoch: 4 / Loss:(398.628/37.074/1086.587) / Accuracy:(0.952/0.999) / TrainingTime:6.231(min)
-Epoch 50 finished.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.655
-Document Classification Accuracy: 0.753
-Rouge Score: 0.301
-Epoch: 0 / Loss:(322.154/26.522/1008.300) / Accuracy:(0.963/1.000) / TrainingTime:6.181(min)
-Epoch: 1 / Loss:(349.525/30.426/951.784) / Accuracy:(0.959/0.999) / TrainingTime:6.345(min)
-Epoch: 2 / Loss:(476.186/28.619/897.555) / Accuracy:(0.958/1.000) / TrainingTime:6.182(min)
-Epoch: 3 / Loss:(354.519/24.352/941.271) / Accuracy:(0.960/1.000) / TrainingTime:6.168(min)
-Epoch: 4 / Loss:(519.834/69.775/1247.095) / Accuracy:(0.941/0.995) / TrainingTime:6.204(min)
-Epoch 55 finished.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.674
-Document Classification Accuracy: 0.758
-Rouge Score: 0.302
-Epoch: 0 / Loss:(294.978/23.942/796.797) / Accuracy:(0.970/1.000) / TrainingTime:6.232(min)
-Epoch: 1 / Loss:(257.038/23.675/804.761) / Accuracy:(0.975/1.000) / TrainingTime:6.232(min)
-Epoch: 2 / Loss:(222.098/21.876/691.293) / Accuracy:(0.978/1.000) / TrainingTime:6.407(min)
-Epoch: 3 / Loss:(204.270/20.103/618.162) / Accuracy:(0.980/1.000) / TrainingTime:6.212(min)
-Epoch: 4 / Loss:(207.975/24.793/785.314) / Accuracy:(0.979/0.999) / TrainingTime:6.222(min)
-Epoch 60 finished.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.667
-Document Classification Accuracy: 0.760
-Rouge Score: 0.304
-Epoch: 0 / Loss:(265.959/29.653/863.116) / Accuracy:(0.972/0.999) / TrainingTime:6.190(min)
-Epoch: 1 / Loss:(379.737/61.073/850.393) / Accuracy:(0.959/0.996) / TrainingTime:6.212(min)
-Epoch: 2 / Loss:(265.240/23.377/903.783) / Accuracy:(0.971/1.000) / TrainingTime:6.339(min)
-Epoch: 3 / Loss:(204.621/20.742/699.106) / Accuracy:(0.979/1.000) / TrainingTime:6.220(min)
-Epoch: 4 / Loss:(189.141/20.390/635.134) / Accuracy:(0.980/1.000) / TrainingTime:6.226(min)
-Epoch 65 finished.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.665
-Document Classification Accuracy: 0.757
-Rouge Score: 0.300
-Epoch: 0 / Loss:(159.664/17.680/620.984) / Accuracy:(0.984/1.000) / TrainingTime:6.241(min)
-Epoch: 1 / Loss:(171.138/25.214/570.626) / Accuracy:(0.984/1.000) / TrainingTime:6.277(min)
-Epoch: 2 / Loss:(163.902/17.967/575.774) / Accuracy:(0.985/1.000) / TrainingTime:6.238(min)
-Epoch: 3 / Loss:(150.225/17.206/541.633) / Accuracy:(0.986/1.000) / TrainingTime:6.378(min)
-Epoch: 4 / Loss:(140.687/16.532/510.297) / Accuracy:(0.987/1.000) / TrainingTime:6.218(min)
-Epoch 70 finished.
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.666
-Document Classification Accuracy: 0.751
-Rouge Score: 0.301
-Epoch: 0 / Loss:(121.459/15.551/507.938) / Accuracy:(0.989/1.000) / TrainingTime:6.245(min)
-Epoch: 1 / Loss:(112.934/14.757/520.470) / Accuracy:(0.990/1.000) / TrainingTime:6.259(min)
-Epoch: 2 / Loss:(111.719/16.824/498.174) / Accuracy:(0.990/1.000) / TrainingTime:6.260(min)
-Epoch: 3 / Loss:(244.489/17.777/503.475) / Accuracy:(0.982/1.000) / TrainingTime:6.273(min)
-Epoch: 4 / Loss:(164.591/14.489/525.553) / Accuracy:(0.984/1.000) / TrainingTime:6.328(min)
-Epoch 75 finished.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Sentence Extraction Accuracy: 0.666
-Document Classification Accuracy: 0.755
-Rouge Score: 0.301
-Epoch: 0 / Loss:(116.939/13.954/480.541) / Accuracy:(0.990/1.000) / TrainingTime:6.283(min)
-Epoch: 1 / Loss:(111.864/14.941/504.978) / Accuracy:(0.990/1.000) / TrainingTime:6.262(min)
-Epoch: 2 / Loss:(112.961/14.244/497.180) / Accuracy:(0.990/1.000) / TrainingTime:6.265(min)
-Epoch: 3 / Loss:(106.950/13.777/413.968) / Accuracy:(0.991/1.000) / TrainingTime:6.297(min)
-Epoch: 4 / Loss:(116.437/13.227/426.425) / Accuracy:(0.989/1.000) / TrainingTime:6.267(min)
-Epoch 80 finished.
-Error: The length of the document is 1.
-No sentences are selected
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-No sentences are selected
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
-Error: The length of the document is 1.
 Sentence Extraction Accuracy: 0.664
-Document Classification Accuracy: 0.752
-Rouge Score: 0.301
-
+Document Classification Accuracy: 0.758
+Rouge Score: 0.105
+Epoch: 0 / Loss:(1037.624/122.535/6523.301) / Accuracy:(0.846/0.998) / TrainingTime:5.317(min)
+Epoch: 1 / Loss:(979.701/110.044/5664.982) / Accuracy:(0.855/0.999) / TrainingTime:5.314(min)
+Epoch: 2 / Loss:(921.546/101.604/5241.437) / Accuracy:(0.867/0.999) / TrainingTime:5.310(min)
+Epoch: 3 / Loss:(884.938/94.996/4487.376) / Accuracy:(0.873/1.000) / TrainingTime:5.325(min)
+Epoch: 4 / Loss:(1323.937/136.241/4692.972) / Accuracy:(0.840/0.993) / TrainingTime:5.361(min)
+Epoch: 5 / Loss:(945.495/94.333/3651.504) / Accuracy:(0.862/0.999) / TrainingTime:5.337(min)
+Epoch: 6 / Loss:(1321.501/152.598/4140.792) / Accuracy:(0.793/0.993) / TrainingTime:5.456(min)
+Epoch: 7 / Loss:(1190.081/107.528/3599.297) / Accuracy:(0.810/0.998) / TrainingTime:5.383(min)
+Epoch: 8 / Loss:(977.248/75.204/2778.964) / Accuracy:(0.855/1.000) / TrainingTime:5.344(min)
+Epoch: 9 / Loss:(861.957/65.211/2523.285) / Accuracy:(0.878/0.999) / TrainingTime:5.316(min)
+Epoch 30 finished.
+Sentence Extraction Accuracy: 0.676
+Document Classification Accuracy: 0.755
+Rouge Score: 0.105
+Epoch: 0 / Loss:(791.589/61.496/2565.991) / Accuracy:(0.887/0.999) / TrainingTime:5.330(min)
+Epoch: 1 / Loss:(747.176/58.246/2268.042) / Accuracy:(0.895/0.999) / TrainingTime:5.318(min)
+Epoch: 2 / Loss:(713.536/55.268/2474.166) / Accuracy:(0.901/1.000) / TrainingTime:5.350(min)
+Epoch: 3 / Loss:(642.917/48.631/1986.451) / Accuracy:(0.913/1.000) / TrainingTime:5.331(min)
+Epoch: 4 / Loss:(603.583/46.046/2085.736) / Accuracy:(0.919/1.000) / TrainingTime:5.352(min)
+Epoch: 5 / Loss:(579.923/45.392/1699.604) / Accuracy:(0.923/1.000) / TrainingTime:5.363(min)
+Epoch: 6 / Loss:(577.591/45.389/1717.816) / Accuracy:(0.923/1.000) / TrainingTime:5.352(min)
+Epoch: 7 / Loss:(555.350/40.090/1584.376) / Accuracy:(0.928/1.000) / TrainingTime:5.355(min)
+Epoch: 8 / Loss:(758.482/60.553/1752.967) / Accuracy:(0.904/0.998) / TrainingTime:5.409(min)
+Epoch: 9 / Loss:(544.262/40.071/1435.724) / Accuracy:(0.931/1.000) / TrainingTime:5.364(min)
+Epoch 40 finished.
+Sentence Extraction Accuracy: 0.662
+Document Classification Accuracy: 0.767
+Rouge Score: 0.098
+Epoch: 0 / Loss:(506.042/38.027/1330.944) / Accuracy:(0.936/1.000) / TrainingTime:5.369(min)
+Epoch: 1 / Loss:(478.307/39.200/1289.653) / Accuracy:(0.939/0.999) / TrainingTime:5.366(min)
+Epoch: 2 / Loss:(514.328/36.226/1151.882) / Accuracy:(0.939/0.999) / TrainingTime:5.374(min)
+Epoch: 3 / Loss:(443.274/31.593/1086.622) / Accuracy:(0.945/1.000) / TrainingTime:5.358(min)
+Epoch: 4 / Loss:(443.872/35.293/1108.689) / Accuracy:(0.948/1.000) / TrainingTime:5.377(min)
+Epoch: 5 / Loss:(1385.348/82.056/1512.730) / Accuracy:(0.879/0.996) / TrainingTime:5.415(min)
+Epoch: 6 / Loss:(523.073/35.407/1130.647) / Accuracy:(0.935/0.999) / TrainingTime:5.396(min)
+Epoch: 7 / Loss:(414.150/26.651/977.504) / Accuracy:(0.951/1.000) / TrainingTime:5.369(min)
+Epoch: 8 / Loss:(381.798/26.076/862.189) / Accuracy:(0.955/1.000) / TrainingTime:5.369(min)
+Epoch: 9 / Loss:(359.793/26.841/769.086) / Accuracy:(0.960/1.000) / TrainingTime:5.385(min)
+Epoch 50 finished.
+Sentence Extraction Accuracy: 0.671
+Document Classification Accuracy: 0.747
+Rouge Score: 0.099
+Epoch: 0 / Loss:(341.075/25.435/770.375) / Accuracy:(0.961/1.000) / TrainingTime:5.382(min)
+Epoch: 1 / Loss:(436.646/28.393/1174.508) / Accuracy:(0.952/1.000) / TrainingTime:5.373(min)
+Epoch: 2 / Loss:(330.540/23.584/867.939) / Accuracy:(0.962/1.000) / TrainingTime:5.388(min)
+Epoch: 3 / Loss:(343.208/29.298/835.020) / Accuracy:(0.960/0.999) / TrainingTime:5.377(min)
+Epoch: 4 / Loss:(320.247/25.337/781.013) / Accuracy:(0.964/1.000) / TrainingTime:5.383(min)
+Epoch: 5 / Loss:(297.954/21.742/737.936) / Accuracy:(0.967/1.000) / TrainingTime:5.390(min)
+Epoch: 6 / Loss:(278.861/21.507/631.546) / Accuracy:(0.969/1.000) / TrainingTime:5.399(min)
+Epoch: 7 / Loss:(1293.441/262.925/1956.582) / Accuracy:(0.934/0.990) / TrainingTime:5.018(min)
+Epoch: 8 / Loss:(849.487/69.162/1863.136) / Accuracy:(0.880/0.995) / TrainingTime:5.406(min)
+Epoch: 9 / Loss:(441.362/26.481/1102.150) / Accuracy:(0.948/1.000) / TrainingTime:5.387(min)
+Epoch 60 finished.
+Sentence Extraction Accuracy: 0.668
+Document Classification Accuracy: 0.765
+Rouge Score: 0.093
+Epoch: 0 / Loss:(500.908/29.692/1075.073) / Accuracy:(0.939/1.000) / TrainingTime:5.419(min)
+Epoch: 1 / Loss:(366.054/25.381/954.798) / Accuracy:(0.959/1.000) / TrainingTime:5.393(min)
+Epoch: 2 / Loss:(295.524/19.629/725.151) / Accuracy:(0.969/1.000) / TrainingTime:5.387(min)
+Epoch: 3 / Loss:(414.764/42.469/827.615) / Accuracy:(0.956/0.999) / TrainingTime:5.403(min)
+Epoch: 4 / Loss:(300.904/20.136/784.825) / Accuracy:(0.969/1.000) / TrainingTime:5.392(min)
+Epoch: 5 / Loss:(338.506/20.570/708.458) / Accuracy:(0.966/1.000) / TrainingTime:5.403(min)
+Epoch: 6 / Loss:(271.686/18.555/668.385) / Accuracy:(0.973/1.000) / TrainingTime:5.412(min)
+Epoch: 7 / Loss:(247.750/17.762/633.537) / Accuracy:(0.977/1.000) / TrainingTime:5.407(min)
+Epoch: 8 / Loss:(232.391/17.117/562.324) / Accuracy:(0.980/1.000) / TrainingTime:5.407(min)
+Epoch: 9 / Loss:(220.370/16.350/543.908) / Accuracy:(0.980/1.000) / TrainingTime:5.408(min)
+Epoch 70 finished.
+Sentence Extraction Accuracy: 0.653
+Document Classification Accuracy: 0.753
+Rouge Score: 0.100
+Epoch: 0 / Loss:(221.296/15.395/476.313) / Accuracy:(0.980/1.000) / TrainingTime:5.415(min)
+Epoch: 1 / Loss:(224.909/16.007/472.373) / Accuracy:(0.979/1.000) / TrainingTime:5.410(min)
+Epoch: 2 / Loss:(207.086/16.415/567.684) / Accuracy:(0.981/1.000) / TrainingTime:5.408(min)
+Epoch: 3 / Loss:(291.403/22.174/644.139) / Accuracy:(0.970/1.000) / TrainingTime:5.411(min)
+Epoch: 4 / Loss:(217.892/17.960/536.337) / Accuracy:(0.979/1.000) / TrainingTime:5.421(min)
+Epoch: 5 / Loss:(198.335/15.286/529.275) / Accuracy:(0.983/1.000) / TrainingTime:5.410(min)
+Epoch: 6 / Loss:(182.078/14.367/480.618) / Accuracy:(0.984/1.000) / TrainingTime:5.410(min)
+Epoch: 7 / Loss:(820.087/33.519/676.875) / Accuracy:(0.966/0.997) / TrainingTime:5.424(min)
+Epoch: 8 / Loss:(12225.129/108.626/1021.999) / Accuracy:(0.771/0.988) / TrainingTime:5.795(min)
+Epoch: 9 / Loss:(307.885/15.127/674.041) / Accuracy:(0.968/1.000) / TrainingTime:5.412(min)
+Epoch 80 finished.
+Sentence Extraction Accuracy: 0.660
+Document Classification Accuracy: 0.746
+Rouge Score: 0.095
+Epoch: 0 / Loss:(209.023/13.870/540.513) / Accuracy:(0.982/1.000) / TrainingTime:5.405(min)
+Epoch: 1 / Loss:(175.044/13.337/495.532) / Accuracy:(0.986/1.000) / TrainingTime:5.403(min)
+Epoch: 2 / Loss:(161.362/13.592/496.522) / Accuracy:(0.987/1.000) / TrainingTime:5.415(min)
+Epoch: 3 / Loss:(220.152/17.932/416.203) / Accuracy:(0.980/0.999) / TrainingTime:5.410(min)
+Epoch: 4 / Loss:(245.837/15.369/554.726) / Accuracy:(0.978/1.000) / TrainingTime:5.415(min)
+Epoch: 5 / Loss:(196.914/24.316/508.305) / Accuracy:(0.981/0.999) / TrainingTime:5.428(min)
+Epoch: 6 / Loss:(167.836/12.995/479.033) / Accuracy:(0.985/1.000) / TrainingTime:5.420(min)
+Epoch: 7 / Loss:(130.676/12.528/384.409) / Accuracy:(0.989/1.000) / TrainingTime:5.420(min)
+Epoch: 8 / Loss:(139.006/12.033/463.111) / Accuracy:(0.988/1.000) / TrainingTime:5.430(min)
+Epoch: 9 / Loss:(132.373/12.867/464.169) / Accuracy:(0.989/1.000) / TrainingTime:5.418(min)
+Epoch 90 finished.
+Sentence Extraction Accuracy: 0.657
+Document Classification Accuracy: 0.745
+Rouge Score: 0.102
+Epoch: 0 / Loss:(123.988/11.276/421.877) / Accuracy:(0.990/1.000) / TrainingTime:5.420(min)
+Epoch: 1 / Loss:(112.128/11.068/389.594) / Accuracy:(0.990/1.000) / TrainingTime:5.419(min)
+Epoch: 2 / Loss:(115.339/11.239/351.345) / Accuracy:(0.992/1.000) / TrainingTime:5.422(min)
+Epoch: 3 / Loss:(13172.105/140.792/632.033) / Accuracy:(0.826/0.986) / TrainingTime:5.781(min)
+Epoch: 4 / Loss:(7640.962/57.931/706.587) / Accuracy:(0.826/0.994) / TrainingTime:5.670(min)
+Epoch: 5 / Loss:(403.113/28.153/797.510) / Accuracy:(0.960/0.999) / TrainingTime:5.438(min)
+Epoch: 6 / Loss:(196.638/11.926/503.181) / Accuracy:(0.982/1.000) / TrainingTime:5.407(min)
+Epoch: 7 / Loss:(142.997/10.964/356.369) / Accuracy:(0.989/1.000) / TrainingTime:5.421(min)
+Epoch: 8 / Loss:(134.108/11.209/368.901) / Accuracy:(0.989/1.000) / TrainingTime:5.421(min)
+Epoch: 9 / Loss:(121.445/11.670/371.851) / Accuracy:(0.989/1.000) / TrainingTime:5.423(min)
+Epoch 100 finished.
+Sentence Extraction Accuracy: 0.652
+Document Classification Accuracy: 0.742
+Rouge Score: 0.098
+Epoch: 0 / Loss:(115.293/10.770/395.174) / Accuracy:(0.990/1.000) / TrainingTime:5.431(min)
+Epoch: 1 / Loss:(115.661/12.155/352.120) / Accuracy:(0.990/1.000) / TrainingTime:5.425(min)
+Epoch: 2 / Loss:(115.431/10.743/352.834) / Accuracy:(0.990/1.000) / TrainingTime:5.424(min)
+Epoch: 3 / Loss:(248.233/11.698/429.589) / Accuracy:(0.979/1.000) / TrainingTime:5.434(min)
+Epoch: 4 / Loss:(131.119/10.099/328.826) / Accuracy:(0.988/1.000) / TrainingTime:5.427(min)
+Epoch: 5 / Loss:(95.214/9.616/336.673) / Accuracy:(0.992/1.000) / TrainingTime:5.422(min)
+Epoch: 6 / Loss:(95.635/9.385/313.457) / Accuracy:(0.992/1.000) / TrainingTime:5.423(min)
+Epoch: 7 / Loss:(87.503/9.299/332.210) / Accuracy:(0.992/1.000) / TrainingTime:5.420(min)
+Epoch: 8 / Loss:(134.063/10.825/339.677) / Accuracy:(0.988/1.000) / TrainingTime:5.418(min)
+Epoch: 9 / Loss:(95.758/9.369/336.042) / Accuracy:(0.991/1.000) / TrainingTime:5.425(min)
+Epoch 110 finished.
+Sentence Extraction Accuracy: 0.650
+Document Classification Accuracy: 0.749
+Rouge Score: 0.105
+Epoch: 0 / Loss:(880.198/93.668/2321.292) / Accuracy:(0.899/0.992) / TrainingTime:5.439(min)
+Epoch: 1 / Loss:(256.243/12.651/768.877) / Accuracy:(0.973/1.000) / TrainingTime:5.423(min)
+Epoch: 2 / Loss:(129.602/9.168/554.745) / Accuracy:(0.988/1.000) / TrainingTime:5.426(min)
+Epoch: 3 / Loss:(490.501/34.534/766.916) / Accuracy:(0.938/0.998) / TrainingTime:5.409(min)
+Epoch: 4 / Loss:(359.260/13.561/668.770) / Accuracy:(0.958/1.000) / TrainingTime:5.388(min)
+Epoch: 5 / Loss:(227.141/10.445/428.060) / Accuracy:(0.979/1.000) / TrainingTime:5.384(min)
+Epoch: 6 / Loss:(245.098/9.611/484.393) / Accuracy:(0.978/1.000) / TrainingTime:5.413(min)
+Epoch: 7 / Loss:(141.355/9.179/367.121) / Accuracy:(0.989/1.000) / TrainingTime:5.417(min)
+Epoch: 8 / Loss:(114.176/8.395/326.880) / Accuracy:(0.992/1.000) / TrainingTime:5.413(min)
+Epoch: 9 / Loss:(107.414/7.836/303.494) / Accuracy:(0.992/1.000) / TrainingTime:5.414(min)
+Epoch 120 finished.
+Sentence Extraction Accuracy: 0.655
+Document Classification Accuracy: 0.749
+Rouge Score: 0.101
+Epoch: 0 / Loss:(95.754/8.181/317.142) / Accuracy:(0.994/1.000) / TrainingTime:5.422(min)
+Epoch: 1 / Loss:(103.288/7.496/335.243) / Accuracy:(0.992/1.000) / TrainingTime:5.415(min)
+Epoch: 2 / Loss:(94.648/7.495/302.086) / Accuracy:(0.993/1.000) / TrainingTime:5.426(min)
+Epoch: 3 / Loss:(87.200/7.263/307.514) / Accuracy:(0.994/1.000) / TrainingTime:5.425(min)
+Epoch: 4 / Loss:(84.312/7.019/324.686) / Accuracy:(0.994/1.000) / TrainingTime:5.421(min)
+Epoch: 5 / Loss:(78.321/7.374/303.924) / Accuracy:(0.994/1.000) / TrainingTime:5.422(min)
+Epoch: 6 / Loss:(104.119/6.638/332.210) / Accuracy:(0.993/1.000) / TrainingTime:5.428(min)
+Epoch: 7 / Loss:(81.300/7.051/278.135) / Accuracy:(0.993/1.000) / TrainingTime:5.416(min)
+Epoch: 8 / Loss:(82.518/6.729/275.570) / Accuracy:(0.993/1.000) / TrainingTime:5.421(min)
+Epoch: 9 / Loss:(74.152/6.635/279.153) / Accuracy:(0.994/1.000) / TrainingTime:5.430(min)
+Epoch 130 finished.
+Sentence Extraction Accuracy: 0.647
+Document Classification Accuracy: 0.744
+Rouge Score: 0.101
+Epoch: 0 / Loss:(67.214/6.417/264.783) / Accuracy:(0.995/1.000) / TrainingTime:5.421(min)
+Epoch: 1 / Loss:(72.445/6.381/292.838) / Accuracy:(0.994/1.000) / TrainingTime:5.417(min)
+Epoch: 2 / Loss:(66.975/6.059/287.026) / Accuracy:(0.994/1.000) / TrainingTime:5.416(min)
+Epoch: 3 / Loss:(61.025/6.112/295.423) / Accuracy:(0.994/1.000) / TrainingTime:5.424(min)
+Epoch: 4 / Loss:(176.185/8.690/367.099) / Accuracy:(0.984/1.000) / TrainingTime:5.433(min)
+Epoch: 5 / Loss:(95.186/6.789/293.555) / Accuracy:(0.992/1.000) / TrainingTime:5.430(min)
+Epoch: 6 / Loss:(508.480/8.895/304.173) / Accuracy:(0.982/1.000) / TrainingTime:5.437(min)
+Epoch: 7 / Loss:(151.938/7.015/325.281) / Accuracy:(0.989/1.000) / TrainingTime:5.421(min)
+Epoch: 8 / Loss:(99.629/9.633/276.322) / Accuracy:(0.991/1.000) / TrainingTime:5.433(min)
+Epoch: 9 / Loss:(75.937/6.307/257.060) / Accuracy:(0.994/1.000) / TrainingTime:5.431(min)
+Epoch 140 finished.
+Sentence Extraction Accuracy: 0.643
+Document Classification Accuracy: 0.746
+Rouge Score: 0.101
+Epoch: 0 / Loss:(69.329/6.086/217.755) / Accuracy:(0.994/1.000) / TrainingTime:5.433(min)
+Epoch: 1 / Loss:(63.916/5.881/186.995) / Accuracy:(0.995/1.000) / TrainingTime:5.426(min)
+Epoch: 2 / Loss:(59.613/5.965/200.090) / Accuracy:(0.995/1.000) / TrainingTime:5.428(min)
+Epoch: 3 / Loss:(60.510/5.684/180.667) / Accuracy:(0.995/1.000) / TrainingTime:5.424(min)
+Epoch: 4 / Loss:(57.103/5.407/206.096) / Accuracy:(0.995/1.000) / TrainingTime:5.432(min)
+Epoch: 5 / Loss:(83.445/6.195/281.900) / Accuracy:(0.992/1.000) / TrainingTime:5.425(min)
+Epoch: 6 / Loss:(74.466/5.803/265.212) / Accuracy:(0.994/1.000) / TrainingTime:5.429(min)
+Epoch: 7 / Loss:(61.557/5.448/247.888) / Accuracy:(0.995/1.000) / TrainingTime:5.429(min)
+Epoch: 8 / Loss:(55.963/5.600/208.751) / Accuracy:(0.995/1.000) / TrainingTime:5.435(min)
+Epoch: 9 / Loss:(53.230/5.114/206.637) / Accuracy:(0.995/1.000) / TrainingTime:5.431(min)
+Epoch 150 finished.
+Sentence Extraction Accuracy: 0.639
+Document Classification Accuracy: 0.738
+Rouge Score: 0.095
+Epoch: 0 / Loss:(53.732/5.261/218.514) / Accuracy:(0.995/1.000) / TrainingTime:5.426(min)
+Epoch: 1 / Loss:(51.050/4.926/197.427) / Accuracy:(0.995/1.000) / TrainingTime:5.439(min)
+Epoch: 2 / Loss:(48.829/4.820/192.624) / Accuracy:(0.995/1.000) / TrainingTime:5.434(min)
+Epoch: 3 / Loss:(48.874/4.796/204.133) / Accuracy:(0.995/1.000) / TrainingTime:5.430(min)
+Epoch: 4 / Loss:(48.345/4.770/183.353) / Accuracy:(0.995/1.000) / TrainingTime:5.436(min)
+Epoch: 5 / Loss:(56.208/4.655/182.729) / Accuracy:(0.995/1.000) / TrainingTime:5.434(min)
+Epoch: 6 / Loss:(48.495/4.772/175.264) / Accuracy:(0.995/1.000) / TrainingTime:5.434(min)
+Epoch: 7 / Loss:(49.580/4.550/173.043) / Accuracy:(0.995/1.000) / TrainingTime:5.433(min)
+Epoch: 8 / Loss:(49.764/4.432/197.939) / Accuracy:(0.995/1.000) / TrainingTime:5.434(min)
+Epoch: 9 / Loss:(45.530/4.459/186.327) / Accuracy:(0.995/1.000) / TrainingTime:5.436(min)
+Epoch 160 finished.
+Sentence Extraction Accuracy: 0.634
+Document Classification Accuracy: 0.737
+Rouge Score: 0.104
+Epoch: 0 / Loss:(44.799/4.341/198.792) / Accuracy:(0.995/1.000) / TrainingTime:5.440(min)
+Epoch: 1 / Loss:(46.403/4.187/207.866) / Accuracy:(0.996/1.000) / TrainingTime:5.431(min)
+Epoch: 2 / Loss:(45.080/4.236/193.580) / Accuracy:(0.995/1.000) / TrainingTime:5.436(min)
+Epoch: 3 / Loss:(40.734/4.176/180.592) / Accuracy:(0.996/1.000) / TrainingTime:5.476(min)
+Epoch: 4 / Loss:(40.373/4.111/161.637) / Accuracy:(0.995/1.000) / TrainingTime:5.431(min)
+Epoch: 5 / Loss:(39.625/4.037/182.509) / Accuracy:(0.996/1.000) / TrainingTime:5.437(min)
+Epoch: 6 / Loss:(41.743/4.104/166.999) / Accuracy:(0.996/1.000) / TrainingTime:5.437(min)
+Epoch: 7 / Loss:(43.994/3.904/160.593) / Accuracy:(0.996/1.000) / TrainingTime:5.441(min)
+Epoch: 8 / Loss:(46.729/3.917/181.170) / Accuracy:(0.995/1.000) / TrainingTime:5.434(min)
+Epoch: 9 / Loss:(43.157/3.963/148.422) / Accuracy:(0.996/1.000) / TrainingTime:5.439(min)
+Epoch 170 finished.
+Sentence Extraction Accuracy: 0.635
+Document Classification Accuracy: 0.744
+Rouge Score: 0.102
+Epoch: 0 / Loss:(39.364/3.807/156.864) / Accuracy:(0.995/1.000) / TrainingTime:5.438(min)
+Epoch: 1 / Loss:(40.066/3.892/164.205) / Accuracy:(0.996/1.000) / TrainingTime:5.436(min)
+Epoch: 2 / Loss:(39.218/3.683/153.071) / Accuracy:(0.996/1.000) / TrainingTime:5.440(min)
+Epoch: 3 / Loss:(39.870/3.684/149.955) / Accuracy:(0.995/1.000) / TrainingTime:5.443(min)
+Epoch: 4 / Loss:(40.169/3.737/133.444) / Accuracy:(0.996/1.000) / TrainingTime:5.445(min)
+Epoch: 5 / Loss:(37.886/3.679/133.359) / Accuracy:(0.996/1.000) / TrainingTime:5.438(min)
+Epoch: 6 / Loss:(40.470/3.442/173.028) / Accuracy:(0.995/1.000) / TrainingTime:5.437(min)
+Epoch: 7 / Loss:(38.293/3.605/154.271) / Accuracy:(0.995/1.000) / TrainingTime:5.433(min)
+Epoch: 8 / Loss:(37.425/3.547/173.283) / Accuracy:(0.996/1.000) / TrainingTime:5.440(min)
+Epoch: 9 / Loss:(42.937/3.379/163.919) / Accuracy:(0.995/1.000) / TrainingTime:5.440(min)
+Epoch 180 finished.
+Sentence Extraction Accuracy: 0.635
+Document Classification Accuracy: 0.746
+Rouge Score: 0.099
+Epoch: 0 / Loss:(37.857/3.482/150.477) / Accuracy:(0.996/1.000) / TrainingTime:5.440(min)
+Epoch: 1 / Loss:(38.902/3.360/155.072) / Accuracy:(0.996/1.000) / TrainingTime:5.445(min)
+Epoch: 2 / Loss:(35.273/3.367/154.308) / Accuracy:(0.996/1.000) / TrainingTime:5.436(min)
+Epoch: 3 / Loss:(34.864/3.333/149.888) / Accuracy:(0.996/1.000) / TrainingTime:5.433(min)
+Epoch: 4 / Loss:(34.856/3.210/144.391) / Accuracy:(0.996/1.000) / TrainingTime:5.439(min)
+Epoch: 5 / Loss:(42.820/3.730/178.091) / Accuracy:(0.996/1.000) / TrainingTime:5.438(min)
+Epoch: 6 / Loss:(48.300/3.231/227.155) / Accuracy:(0.995/1.000) / TrainingTime:5.432(min)
+Epoch: 7 / Loss:(36.717/3.298/166.860) / Accuracy:(0.996/1.000) / TrainingTime:5.433(min)
+Epoch: 8 / Loss:(35.259/3.219/181.256) / Accuracy:(0.996/1.000) / TrainingTime:5.440(min)
+Epoch: 9 / Loss:(32.771/3.117/183.976) / Accuracy:(0.996/1.000) / TrainingTime:5.439(min)
+Epoch 190 finished.
+Sentence Extraction Accuracy: 0.634
+Document Classification Accuracy: 0.741
+Rouge Score: 0.098
+Epoch: 0 / Loss:(33.512/3.081/161.520) / Accuracy:(0.996/1.000) / TrainingTime:5.441(min)
+Epoch: 1 / Loss:(31.931/3.047/143.539) / Accuracy:(0.996/1.000) / TrainingTime:5.444(min)
+Epoch: 2 / Loss:(62.236/3.167/251.774) / Accuracy:(0.994/1.000) / TrainingTime:5.439(min)
+Epoch: 3 / Loss:(37.860/3.091/200.672) / Accuracy:(0.995/1.000) / TrainingTime:5.447(min)
+Epoch: 4 / Loss:(32.827/3.010/181.263) / Accuracy:(0.996/1.000) / TrainingTime:5.443(min)
+Epoch: 5 / Loss:(31.161/3.002/147.381) / Accuracy:(0.996/1.000) / TrainingTime:5.445(min)
+Epoch: 6 / Loss:(31.158/2.946/137.334) / Accuracy:(0.996/1.000) / TrainingTime:5.437(min)
+Epoch: 7 / Loss:(31.613/2.948/140.270) / Accuracy:(0.996/1.000) / TrainingTime:5.440(min)
+Epoch: 8 / Loss:(30.240/2.855/115.855) / Accuracy:(0.996/1.000) / TrainingTime:5.442(min)
+Epoch: 9 / Loss:(32.734/3.001/134.632) / Accuracy:(0.996/1.000) / TrainingTime:5.443(min)
+Epoch 200 finished.
+Sentence Extraction Accuracy: 0.636
+Document Classification Accuracy: 0.745
+Rouge Score: 0.100
+Epoch: 0 / Loss:(35.292/2.899/150.149) / Accuracy:(0.996/1.000) / TrainingTime:5.442(min)
+Epoch: 1 / Loss:(33.627/2.859/149.790) / Accuracy:(0.996/1.000) / TrainingTime:5.436(min)
+Epoch: 2 / Loss:(31.779/2.824/143.740) / Accuracy:(0.996/1.000) / TrainingTime:5.442(min)
+Epoch: 3 / Loss:(30.662/2.792/129.151) / Accuracy:(0.996/1.000) / TrainingTime:5.447(min)
+Epoch: 4 / Loss:(30.377/2.789/127.210) / Accuracy:(0.996/1.000) / TrainingTime:5.437(min)
+Epoch: 5 / Loss:(30.014/2.734/130.463) / Accuracy:(0.996/1.000) / TrainingTime:5.450(min)
+Epoch: 6 / Loss:(29.609/2.641/121.538) / Accuracy:(0.996/1.000) / TrainingTime:5.442(min)
+Epoch: 7 / Loss:(29.285/2.662/149.188) / Accuracy:(0.996/1.000) / TrainingTime:5.445(min)
+Epoch: 8 / Loss:(28.052/2.627/113.960) / Accuracy:(0.996/1.000) / TrainingTime:5.436(min)
+Epoch: 9 / Loss:(28.448/2.634/113.819) / Accuracy:(0.996/1.000) / TrainingTime:5.445(min)
+Epoch 210 finished.
+Sentence Extraction Accuracy: 0.632
+Document Classification Accuracy: 0.743
+Rouge Score: 0.102
+Epoch: 0 / Loss:(30.048/2.576/133.571) / Accuracy:(0.996/1.000) / TrainingTime:5.436(min)
+Epoch: 1 / Loss:(30.357/2.551/127.532) / Accuracy:(0.996/1.000) / TrainingTime:5.441(min)
+Epoch: 2 / Loss:(28.647/2.553/118.798) / Accuracy:(0.996/1.000) / TrainingTime:5.439(min)
+Epoch: 3 / Loss:(27.828/2.475/120.147) / Accuracy:(0.996/1.000) / TrainingTime:5.435(min)
+Epoch: 4 / Loss:(28.329/2.534/126.824) / Accuracy:(0.996/1.000) / TrainingTime:5.445(min)
+Epoch: 5 / Loss:(27.397/2.421/101.498) / Accuracy:(0.996/1.000) / TrainingTime:5.433(min)
+Epoch: 6 / Loss:(28.275/2.439/130.739) / Accuracy:(0.996/1.000) / TrainingTime:5.433(min)
+Epoch: 7 / Loss:(27.712/2.422/106.872) / Accuracy:(0.996/1.000) / TrainingTime:5.439(min)
+Epoch: 8 / Loss:(26.635/2.382/106.102) / Accuracy:(0.996/1.000) / TrainingTime:5.453(min)
+Epoch: 9 / Loss:(26.879/2.402/100.602) / Accuracy:(0.996/1.000) / TrainingTime:5.439(min)
+Epoch 220 finished.
+Sentence Extraction Accuracy: 0.631
+Document Classification Accuracy: 0.744
+Rouge Score: 0.099
+Epoch: 0 / Loss:(28.091/2.329/122.440) / Accuracy:(0.996/1.000) / TrainingTime:5.443(min)
+Epoch: 1 / Loss:(27.307/2.353/114.917) / Accuracy:(0.996/1.000) / TrainingTime:5.438(min)
+Epoch: 2 / Loss:(26.580/2.286/108.067) / Accuracy:(0.996/1.000) / TrainingTime:5.438(min)
+Epoch: 3 / Loss:(27.628/2.310/112.081) / Accuracy:(0.996/1.000) / TrainingTime:5.439(min)
+Epoch: 4 / Loss:(26.563/2.270/115.336) / Accuracy:(0.996/1.000) / TrainingTime:5.438(min)
+Epoch: 5 / Loss:(25.881/2.264/100.834) / Accuracy:(0.996/1.000) / TrainingTime:5.437(min)
+Epoch: 6 / Loss:(26.101/2.223/110.684) / Accuracy:(0.996/1.000) / TrainingTime:5.438(min)
+Epoch: 7 / Loss:(26.046/2.219/111.072) / Accuracy:(0.996/1.000) / TrainingTime:5.442(min)
+Epoch: 8 / Loss:(25.483/2.176/99.984) / Accuracy:(0.996/1.000) / TrainingTime:5.436(min)
+Epoch: 9 / Loss:(26.086/2.178/98.008) / Accuracy:(0.996/1.000) / TrainingTime:5.441(min)
+Epoch 230 finished.
+Sentence Extraction Accuracy: 0.628
+Document Classification Accuracy: 0.745
+Rouge Score: 0.100
+Epoch: 0 / Loss:(26.164/2.147/98.251) / Accuracy:(0.996/1.000) / TrainingTime:5.440(min)
+Epoch: 1 / Loss:(26.469/2.122/96.222) / Accuracy:(0.996/1.000) / TrainingTime:5.443(min)
+Epoch: 2 / Loss:(26.616/2.172/93.979) / Accuracy:(0.996/1.000) / TrainingTime:5.440(min)
+Epoch: 3 / Loss:(25.757/2.084/95.466) / Accuracy:(0.996/1.000) / TrainingTime:5.432(min)
+Epoch: 4 / Loss:(25.568/2.104/121.103) / Accuracy:(0.996/1.000) / TrainingTime:5.436(min)
+Epoch: 5 / Loss:(25.304/2.093/94.417) / Accuracy:(0.996/1.000) / TrainingTime:5.436(min)
+Epoch: 6 / Loss:(25.629/2.048/138.526) / Accuracy:(0.996/1.000) / TrainingTime:5.437(min)
+Epoch: 7 / Loss:(25.343/2.047/113.036) / Accuracy:(0.996/1.000) / TrainingTime:5.439(min)
+Epoch: 8 / Loss:(24.860/2.028/104.481) / Accuracy:(0.996/1.000) / TrainingTime:5.438(min)
+Epoch: 9 / Loss:(25.384/2.021/88.127) / Accuracy:(0.996/1.000) / TrainingTime:5.437(min)
+Epoch 240 finished.
+Sentence Extraction Accuracy: 0.630
+Document Classification Accuracy: 0.741
+Rouge Score: 0.099
