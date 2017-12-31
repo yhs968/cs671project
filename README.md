@@ -6,7 +6,7 @@
 	- PyTorch 0.2.0
 
 # Team Members
-- [Byungsoo Kim](Byungsoo Kim), [Juneyong Yang](https://github.com/laoconeth), [Taewoon Yoon](https://github.com/Riveryoon), Younghun Song
+- [Byungsoo Kim](https://github.com/RUOK90), [Juneyong Yang](https://github.com/laoconeth), [Taewoon Yoon](https://github.com/Riveryoon), Younghun Song
 
 # Final report
 - [Link](https://github.com/yhs-968/cs671project/blob/master/final%20writeup.pdf)
