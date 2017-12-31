@@ -10,4 +10,5 @@
 - [Abstractive Sentence Summarization
 with Attentive Recurrent Neural Networks](http://www.aclweb.org/anthology/N16-1012)
 
-# Final report: https://github.com/yhs-968/cs671project/blob/master/final%20writeup.pdf
+# Final report
+- [Link](https://github.com/yhs-968/cs671project/blob/master/final%20writeup.pdf)
